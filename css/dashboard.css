@@ -1,0 +1,305 @@
+.breadcump-dhb{
+    background: white;
+    border-bottom: 3px solid #20A4CB;  
+    width: 100%;
+    justify-content: space-between;
+}
+.item-bread{
+    background: white !important;
+    color: black;
+    -webkit-transform: skew(0deg);
+    -moz-transform: skew(0deg);
+    -ms-transform: skew(0deg);
+    -o-transform: skew(0deg);
+    transform: skew(0deg);
+}
+.body-info-eta{
+    grid-template-columns: 100vw;
+}
+.item-bread img{
+    width: 20px;
+}
+.body-dash-dash{
+    margin-top: -50px;
+    padding-bottom: 50px;
+}
+.alert img{
+    width: 30px;
+    cursor: pointer;
+}
+.alert{
+    display: grid;
+    grid-template-columns: 50px 258px;
+    grid-template-rows: 30px;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+.alert-info{
+    background: #eb6624;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 0px 10px 0px;
+    border-radius: 10px;
+    display: none;
+    padding: 10px;
+}
+.card-act{
+    display:grid;
+    justify-content: center;
+}
+.card-a{
+    display: grid;
+    grid-template-columns: 80vw;
+    min-width: 270px;
+    max-width: 400px;
+}
+.header-card{
+    width: 80vw;
+    min-width: 270px;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 20px 40px 1fr;
+    grid-template-rows: 50px;
+    align-items: center;
+    column-gap: 10px;
+}
+h2, p{
+    padding: 0px;
+    margin: 0px;
+}
+.alert-t{
+    margin-top: 10px;
+}
+.ico-drown img{
+    width: 100%;
+    cursor: pointer;
+}
+.con-drown{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.con-drown span{
+    height: 20px;
+    width: 20px;
+    display: grid;
+    border-radius: 5px;
+    background: greenyellow;
+}
+#pen{
+    background: yellow;
+}
+#pen2{
+    background: #79C8F3;
+}
+.item-drown{
+    display: grid;
+    /* grid-template-rows: 40px; */
+    min-height: 40PX;
+    grid-template-columns: 5px 1fr;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    width: 70vw;
+    min-width: 270px;
+    max-width: 400px;
+}
+p{
+    margin: 0px;
+    padding: 0px;
+}
+.color{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    margin-left: 5px;
+}
+.card-act-c .card-a .drown .item-drown .color{
+    background: greenyellow;
+}
+.card-act-p .card-a .drown .item-drown .color{
+    background: rgb(233, 233, 27);
+}
+.card-act-p .card-a .drown .item-drown .color2{
+    background: rgba(233, 27, 27, 0.692);
+        
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+@media (min-width:  920px){
+    .body-dash-dash{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .alert-t{
+        display: grid;
+        grid-template-columns: 50px 258px;
+        grid-template-rows: 30px;
+        column-gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 80px;
+    }
+    .item-drown{
+        width: 400px;
+    }
+    .header-card{
+        width: 400px;
+    }
+    .drown{
+        width: 400px;
+    }
+    .content-info{
+        width: 500px;
+    }
+}
+/* =================================================== Activar ruta ====================================================================*/
+.btn-ruta{
+    background-color: #F5F5F5;
+    padding: 5px 20px;
+    border-right: 1px solid #828282;
+    border-left: 1px solid #828282;
+}
+
+.btn-ruta:hover{
+    background-color: #c9c9c9;
+    transition: all ease 0.3s;
+}
+.act-ruta{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.act-ruta .content-ruta{
+    display: block;
+}
+.p-ruta{
+    margin: 30px 0;
+    padding: 15px 150px;
+    border: 1px solid #828282;
+}
+.act-ruta .content-ruta p{  
+    color: #6d6d6d;
+    font-weight: 500;
+}
+.btn-ru{
+    text-align: right !important;
+}
+.btn-ru button{
+    margin-left: 10px;
+    border: 1px solid #6d6d6d;
+    padding: 7px 40px;
+}
+.btn-ru .aceptar{
+    background-color: #0073CC;
+    color: #F5F5F5;
+}
+
+.btn-ru .aceptar:hover{
+    background-color: #165585;
+    transition: all ease 0.5s;
+}
+.btn-ru .cancelar:hover{
+    background-color: #b1b1b1;
+    transition: all ease 0.5s;
+}
+/* ================================================= Fin ruta =================================================== */
+
+/* ================================================= Inicio dia - Portal =================================================== */
+.container-inicio{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    /* display: none; */
+}
+.header-confi{
+    background: #20A4CB;
+    height: 57px;
+    width: 100vw;
+}
+.header-confi .menu-ini ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.header-confi .menu-ini ul li{
+    float: left;
+}
+.header-confi .menu-ini ul li a{
+    align-items: center;
+    display: block;
+    padding: 15px 30px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.header-confi .menu-ini ul .detalle{
+    float: right;
+}
+
+.container-inicio .container-confi .inicio-dia label, span{
+    line-height: 50px;
+    display: grid;
+    
+}
+.container-inicio .container-confi .inicio-dia span{
+    position: absolute;
+    left: 50%;
+    margin-top: -50px;
+}
+.btn-ini-dia{
+    border: 1px solid #00000049;
+    border-radius: 2px;
+    background-color: #E0E6E7;
+    padding: 4px 30px;
+}
+.btn-ini-dia:hover{
+    background-color: #c2c2c2;
+    transition: all ease 0.5s;
+}
+/* ================================================= Fin inicio dia - Portal =================================================== */
+/* ================================================= Aprovisionamiento ================================= */
+.container-apro{
+    display: flex;
+    justify-content: center;
+}
+.content-apro{
+    margin-top: 40px;
+}
+.content-info{
+    display: block;
+    background: #ffffff;
+    border: 1px solid #00000049;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 2px #00000049;
+    width: 600px;
+    line-height: 2;
+    color: #828282;
+}
+.content-info .btn-apro{
+    display: flex;
+}
+.content-info .btn-apro .detalle{
+    margin-top: 10px;
+    background-color: #e2e2e2;
+    padding: 7px 40px;
+    border: 1px solid #00000049;
+    text-align: center;
+    width: 100%;
+}
+.content-info .btn-apro a:hover{
+    border: 1px solid  #62a5ce;
+    background-color: #d8d8d8;
+    transition: all ease 0.5s;
+}
+

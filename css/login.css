@@ -1,0 +1,132 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: #fcfbfa;
+}
+.info{
+    background: #eb6624;
+    display: grid;
+    grid-template-columns: 40px auto;
+    column-gap: 20px;
+    align-content: center;
+    justify-content: center;
+    width: 100vw;
+    height: 40px;
+}
+.con-ico{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.con-text-info{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info .con-ico img{
+    width: 20px;
+}
+.header{
+    background: #1D88A6;
+    color: white;
+    height: 170px;
+    margin: 0px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    grid-template-rows: 40px 45px;
+    padding-bottom: 20px;
+    width: 100vw;
+}
+.header h2, .header h3{
+    max-width: 300px;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Georgia, OracleSansRegular, sans-serif';
+    font-weight: lighter;
+    text-align: left;
+}
+.header h2{
+    font-size: 36px;
+}
+.header h3{
+    font-size: 32px;
+}
+.con-body{
+    display: grid;
+    width: 100%;
+    min-height: 270px;
+    grid-template-columns: 80%;
+    justify-content: center;
+    row-gap: 50px;
+}
+.con-body form{
+    padding-top: 30px;
+    display: grid;
+    row-gap: 20px;
+}
+.con-body label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.con-body form input{
+    height: 42px;
+    width: 312px;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    border-radius: 5px;
+}
+.con-body form input::placeholder{
+    padding-left: 10px;
+    font-size: 16px;
+}
+.button{
+    height: 42px;
+    width: 83.02px;
+    background: rgba(22, 21, 19, 0.116);
+    border: none;
+    color: rgba(22, 21, 19, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.alert img{
+    width: 30px;
+    cursor: pointer;
+}
+.alert{
+    display: grid;
+    grid-template-columns: 50px 258px;
+    grid-template-rows: 68px;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.alert-info{
+    background: #eb6624;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px 10px;
+    border-radius: 10px;
+    display: none;
+}
+.footer{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+}
+.footer section{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+#audio{
+    display: none
+    }
+.container-login{
+    display: grid;
+}
+form {
+    display: grid;
+    justify-content: center;
+}

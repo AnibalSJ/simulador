@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Instalación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/be71717483.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/orden.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <div class="container-portal" id="portal">
+        <div class="info">
+            <div class="con-ico"><img src="./assets/img/interrogatorio.svg" alt=""></div>
+            <div class="con-text-info">Dando click en este icono, puede saber más información.</div>
+        </div>
+       <div class="header">
+            <div class="menu">
+                <img src="./assets/img/menu-hamburguesa.svg" alt="">
+            </div>
+            <div class="con-info-u">
+                <div class="info-u">
+                    <img src="./assets/img/user.png" alt="">
+                    <p>Usuario</p>
+                </div>
+            </div>
+            <div class="menu-drown" id="menu-drown">
+                <a href="#">Cambiar contraseña</a>
+                <a href="./login.html">Salir</a>
+            </div>
+       </div>
+       <div class="body-portal body-info-eta">
+            <div class="breadcump breadcump-dhb">
+                <div class="item-bread">Lista de actividades</div>
+                <div class="item-bread">
+                    <a href="#" class="btn-ruta" id="btn_ruta">Activar ruta</a>
+                </div>
+                <div class="item-bread">
+                    <img src="./assets/img/menu-puntos.svg" alt="">
+                </div>
+            </div>
+            <div id="pendiente" class="body-dash-dash" style="display: none;">
+                <div class="card-act-p card-act">
+                    <div class="alert-t alert">
+                        <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAu('alert-info-acP', 'audio-acPe')">
+                    <div class="alert-info" id="alert-info-acP">
+                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
+                    </div>
+                    </div>
+                    <div class="card-a">
+                        <div class="header-card">
+                            <div class="ico-drown">
+                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(2)">
+                            </div>
+                            <div class="con-drown">
+                                <span id="pen"></span>
+                            </div>
+                            <div class="con-text">
+                                <h2>Pendiente</h2>
+                            </div>
+                        </div>
+                        <div class="drown" id="drown-p">
+                            <a href="#" class="item-drown" id="inicio_dia" >
+                                <span class="color color2"></span>
+                                <p>Inicio de día</p>
+                            </a>
+                            <a href="#" class="item-drown">
+                                <span class="color"></span>
+                                <p>Almuerzo</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-act-p card-act">
+                    <div class="alert-t alert">
+                        <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAu('alert-info-acP', 'audio-acPe')">
+                    <div class="alert-info" id="alert-info-acP">
+                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
+                    </div>
+                    </div>
+                    <div class="card-a">
+                        <div class="header-card">
+                            <div class="ico-drown">
+                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(2)">
+                            </div>
+                            <div class="con-drown">
+                                <span id="pen"></span>
+                            </div>
+                            <div class="con-text">
+                                <h2>No programado</h2>
+                            </div>
+                        </div>
+                        <div class="drown" id="drown-p">
+                            <a href="#" class="item-drown">
+                                <span class="color"></span>
+                                <p>AM1_1 MDM-FIBRA-000056658 FTTC Aprovisionamiento - Instalación / Modificación KR 8 20 28 AP 201<p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================ Ruta =============================== -->
+            <div id="ruta" class="body-dash-dash" style="display: none;">
+                <div class="card-act-p card-act">
+                    <div class="alert-info" id="alert-info-acP">
+                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
+                    </div>
+                    </div>
+                    <div class="act-ruta">
+                        <div class="content-ruta">
+                            <div class="p-ruta">
+                                <p>¿Activar ruta ya?</p>
+                            </div>
+                            <div class="btn-ru">
+                                <button class="cancelar" id="cancelar">Cancelar</button>
+                                <button class="aceptar" id="aceptar">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================= Fin ruta =======================-->
+            <div id="cerrado" class="body-dash-dash" style="display: none;">
+                <div class="card-act-p card-act">
+                    <div class="alert">
+                        <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAu('alert-info-ac-co', 'audio-acCo')">
+                    <div class="alert-info" id="alert-info-ac-co">
+                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
+                    </div>
+                    </div>
+                    <div class="card-a">
+                        <div class="header-card">
+                            <div class="ico-drown">
+                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(1)">
+                            </div>
+                            <div class="con-drown">
+                                <span class="color"></span>
+                            </div>
+                            <div class="con-text">
+                                <h2>Pendiente</h2>
+                            </div>
+                        </div>
+                        <div class="drown" id="drown-p">
+                            <a href="#" class="item-drown" id="ir_aprovisionamiento">
+                                <span class="color"></span>
+                                <p>AM-2 MDM-FIBRA-002279957 / Aprovisionamiento Cobre - Instalación / Modificación CL 10B 89A 94 Pl 2 DARIO BERMUDEZ</p>
+                            </a>
+                            <a href="./orden.html" class="item-drown">
+                                <span class="color"></span>
+                                <p>Almuerzo</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-act-p card-act">
+                    <div class="alert-t alert">
+                        <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAu('alert-info-acP', 'audio-acPe')">
+                    <div class="alert-info" id="alert-info-acP">
+                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
+                    </div>
+                    </div>
+                    <div class="card-a">
+                        <div class="header-card">
+                            <div class="ico-drown">
+                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(2)">
+                            </div>
+                            <div class="con-drown">
+                                <span id="pen2"></span>
+                            </div>
+                            <div class="con-text">
+                                <h2>Cerrado</h2>
+                            </div>
+                        </div>
+                        <div class="drown" id="drown-p">
+                            <a href="#" class="item-drown">
+                                <span class="color"></span>
+                                <p>Inicio Día - Turnos Inicio 7AM Inicio Día</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+       </div>
+       <audio id="audio-acCo" controls class="audio">
+        <source type="audio/wav" src="./assets/audio/Login.mp3">
+        </audio>
+        <audio id="audio-acPe" controls class="audio">
+            <source type="audio/wav" src="./assets/audio/Login.mp3">
+            </audio>
+    </div>
+    <!-- ====================== Aprovisionamiento ================================== -->
+    <div class="container-inicio" id="aprovisionamiento" style="display: none;">
+        <div class="header-confi">
+            <div class="menu-ini">
+                <ul>
+                    <li><a><i class="fa-solid fa-chevron-left"></i> Inicio</a></li>
+                </ul>
+            </div>
+            <div class="menu-drown" id="menu-drown">
+                <a href="#">Cambiar contraseña</a>
+                <a href="./login.html">Salir</a>
+            </div>
+       </div>
+       <div class="container-apro">
+            <div class="content-apro">
+                <div class="content-info">
+                    <div class="p-apro">
+                        <label for="">Inicio - Fin:</label>
+                        <p>10:07 - 11:37</p>
+                        <label for="">Duración:</label>
+                        <p>1 Hora 30 min</p>
+                    </div>
+                    <div class="btn-apro">
+                        <a href="./orden.html" class="detalle" id="detalle_comp">Aprovisionamiento</a>
+                    </div>
+                </div>
+                <div class="content-info">
+                    <div class="p-apro">
+                        <label for="">Nombre:</label>
+                        <p>DARIO BERMÚDEZ</p>
+                        <label for="">Tipo identificación Cliente:</label>
+                        <p>CC</p>
+                        <label for="">Identificación Cliente:</label>
+                        <p>79575690</p>
+                        <label for="">Dirección:</label>
+                        <p>CL 10B 89A 94 Pl 2</p>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <!-- ====================== Fin Aprovisionamiento ================================== -->
+
+    <!-- ===================== Ir a portal instalacion =============================== -->
+    <div class="container-inicio" id="inicio" style="display: none;">
+        <div class="header-confi">
+            <div class="menu-ini">
+                <ul>
+                    <li><a id="atras"><i class="fa-solid fa-chevron-left"></i> Inicio</a></li>
+                    <li class="detalle"><a>Detalle de actividad (31/03/2023)</a></li>
+                </ul>
+            </div>
+            <div class="menu-drown" id="menu-drown">
+                <a href="#">Cambiar contraseña</a>
+                <a href="./login.html">Salir</a>
+            </div>
+       </div>
+       <div class="container-confi">
+            <div class="inicio-dia">
+                <label for="">Tipo orden: </label><span>Inicio de día</span>
+                <label for="">Intervalo de Tiempo: </label><span>Inicio Día</span>
+                <label for="">Inicio - Fin: </label><span>10:01 - 10:06</span>
+                <label for="">Duración: </label><span>5 min</span>
+                <a href="#" class="btn-ini-dia" id="ir_portal">Portal</a>
+            </div>
+       </div>
+    </div>
+
+    <!-- ================================ Portal de instalacion =========================== -->
+    <div class="container-portal" id="portal_ins" style="display: none;">
+        <div class="header">
+             <div class="menu">
+                 <img src="./assets/img/menu-hamburguesa.svg" alt="">
+             </div>
+             <div class="con-info-u">
+                 <div class="info-u">
+                     <img src="./assets/img/user.png" alt="">
+                     <p>Usuario</p>
+                 </div>
+             </div>
+             <div class="menu-drown" id="menu-drown">
+                 <a href="#">Cambiar contraseña</a>
+                 <a href="./login.html">Salir</a>
+             </div>
+        </div>
+        <div class="body-portal body-info-eta">
+         <div class="body-dash" id="seccion1">
+             <div class="header-dash">
+             </div>
+             <div class="con-cards-portal">
+                 <div class="card">
+                     <p class="cabecera">Datos Cliente</p>
+                     <section class="left">
+                         <br>
+                         <p>Tipo Documento</p>
+                         <p>Número Documento</p>
+                         <p>Nombres</p>
+                         <p>Apellidos</p>
+                         <p>Telefono Fijo</p>
+                         <p>Celular</p>
+                         <p>Celular2</p>
+                         <p>Departamento</p>
+                         <p>Ciudad</p>
+                         <p>Dirección</p>
+                         <p>Estrato</p>
+                         <p>Email</p>
+                         <p>Tipo Cliente</p>
+                         <p>Segmento</p>
+                         <p>Segmento UEN</p>
+                         <p>UEN</p>
+                         <p>Categoria</p>
+                         <p>Recurrente</p>
+                         <br>
+                     </section>
+                     <section class="right">
+                         <br>
+                         <br><br>
+                         <br>
+                     </section>
+                 </div>
+ 
+ 
+                 <div class="card">
+                     <p class="cabecera">Producto Contratado</p>
+                     <section class="left">
+                         <br>
+                         <p>Producto</p>
+                         <p>Tecnologia</p>
+                         <p>Tipo de Orden</p>
+                         <p>Subtipo de Orden</p>
+                         <br>
+                     </section>
+                     <section class="right">
+                         <br>
+                         <p>Inicio de actividades</p>
+                         <br>
+                         <p>Inicio de actividades</p>
+                         <br>
+                         <br>
+                     </section>
+                 </div>
+ 
+                 <div class="card">
+                     <p class="cabecera">Agendamiento</p>
+                     <section class="left">
+                         <br>
+                         <p>Fecha Agenda</p>
+                         <p>Franja</p>
+                         <p>Estado</p>
+                         <br>
+                     </section>
+                     <section class="right">
+                         <br>
+                         <p>3/23/2023</p>
+                         <p>IND</p>
+                         <p>Pendiente</p>
+                         <br>
+                     </section>
+                 </div>                
+             </div>
+             
+             <div class="footer-dash">
+                 <a href="#" id="volver">Volver</a>
+                 <a href="#" class="ac" id="portal_ini">Iniciar</a>
+             </div>
+         </div>
+ 
+         <div class="body-dash" id="seccion2" style="display: none;">
+             <div class="header-dash">
+                 <h2>Detalle Orden <span>MDM-FIBRA-011706262</span></h2>
+             </div>
+             <div class="con-cards-portal">
+                 <div class="card">
+                     <p class="cabecera">Datos Cliente</p>
+                     <section class="left">
+                         <br>
+                         <p>Tipo Documento</p>
+                         <p>Número Documento</p>
+                         <p>Nombres</p>
+                         <p>Apellidos</p>
+                         <p>Telefono Fijo</p>
+                         <p>Celular</p>
+                         <p>Celular2</p>
+                         <p>Departamento</p>
+                         <p>Ciudad</p>
+                         <p>Dirección</p>
+                         <p>Estrato</p>
+                         <p>Email</p>
+                         <p>Tipo Cliente</p>
+                         <p>Segmento</p>
+                         <p>Segmento UEN</p>
+                         <p>UEN</p>
+                         <p>Categoria</p>
+                         <p>Recurrente</p>
+                         <br>
+                     </section>
+                     <section class="right">
+                         <br>
+                         <br><br>
+                         <br>
+                     </section>
+                 </div>
+ 
+                 <div class="card">
+                     <p class="cabecera">Producto Contratado</p>
+                     <section class="left">
+                         <br>
+                         <p>Producto</p>
+                         <p>Tecnologia</p>
+                         <p>Tipo de Orden</p>
+                         <p>Subtipo de Orden</p>
+                         <br>
+                     </section>
+                     <section class="right">
+                         <br>
+                         <p>Inicio de actividades</p>
+                         <br>
+                         <p>Inicio de actividades</p>
+                         <br>
+                         <br>
+                     </section>
+                 </div>
+ 
+                 <div class="card">
+                     <p class="cabecera">Agendamiento</p>
+                     <section class="left">
+                         <br>
+                         <p>Fecha Agenda</p>
+                         <p>Franja</p>
+                         <p>Estado</p>
+                         <br>
+                     </section>
+                     <section class="right">
+                         <br>
+                         <p>3/23/2023</p>
+                         <p>IND</p>
+                         <p id="estado">Iniciada</p>
+                         <br>
+                     </section>
+                 </div>                
+             </div>
+             <div class="portal-comen" id="actividad">
+                 <label for="">Proximas Actividades</label> 
+                 <select name="" id="actividad" required>
+                     <option value="">Seleccione Orden</option>
+                     <option value="">MDM-FIBRA-000055613-KR 1D 29 30-Instalación</option>
+                     <option value="">Orden_1067866-Almuerzo</option>
+                 </select>
+             </div>
+             <div class="footer-dash">
+                 <a href="#" id="volver_dash">Volver</a>
+                 <a href="#" class="ac" id="portal_inicio">Completar</a>
+             </div>
+         </div>
+         <br><br>
+        </div>
+    </div>
+    <!-- =====================================Fin portal de instalacion ==================== -->
+    <script src="./js/ruta.js"></script> 
+    <!-- <script src="./js/main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
