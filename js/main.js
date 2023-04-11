@@ -528,3 +528,15 @@ document.getElementById('btn-modal-ps4error').addEventListener('click', event=>{
         $('#modal-punto-activar').modal('hide')
     });
 })
+// ___________________________________________________________________________________
+let estadoflujo = false;
+document.getElementById('btn-flujo').addEventListener('click', event =>{
+    $( document ).ready(function() {
+        $('#modal-flujo').modal('toggle')
+    });
+})
+document.getElementById('btn-close-flujo').addEventListener('click', event=>{
+    $( document ).ready(function() {
+        $('#modal-flujo').modal('hide')
+    });
+})
