@@ -336,7 +336,7 @@ btn_con_s.addEventListener("click", ()=>{
         title: 'INFORMACIÓN',
         color:'#1285B6',
         html: 
-            '<p>Se encuentra realizando una validación del servicio con el cliente, por favor espere 1 minuto. La encuesta se envió al Correo: PRUEBA@ETB.COM.CO. Número Celular: 3108576458</p><br>' +
+            '<p>Se encuentra realizando una validación del servicio con el cliente, por favor espere 1 minuto. La encuesta se envió al Correo: nicogo@etb.com.co. Número Celular: 3108576458</p><br>' +
             '0 Dia, 0 hora, 0 minuto, <strong></strong> segundos<br>',
         timer: 5000,
         didOpen: () =>{
