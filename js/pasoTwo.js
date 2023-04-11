@@ -4,6 +4,7 @@ function modalUbi(){
         $('#modal-ubi').modal('toggle')
     });
 }
+let cantsvaag = 0;
 // paso 2 
 
 document.getElementById('con-venta-SVA').addEventListener("click", event =>{
@@ -43,25 +44,37 @@ document.getElementById('con-venta-SVA').addEventListener("click", event =>{
 document.getElementById('c-VC').addEventListener('change', event =>{
     if(event.srcElement.checked){
         document.getElementById('can-VC').disabled = false;
+        cantsvaag = cantsvaag + 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }else{
         document.getElementById('can-VC').disabled = true;
         document.getElementById('can-VC').selectedIndex = 0
+        cantsvaag = cantsvaag - 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }
 })
 document.getElementById('c-vD').addEventListener('change', event =>{
     if(event.srcElement.checked){
         document.getElementById('can-vD').disabled = false;
+        cantsvaag = cantsvaag + 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }else{
         document.getElementById('can-vD').disabled = true;
         document.getElementById('can-vD').selectedIndex = 0
+        cantsvaag = cantsvaag - 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }
 })
 document.getElementById('c-PC').addEventListener('change', event =>{
     if(event.srcElement.checked){
         document.getElementById('can-PC').disabled = false;
+                cantsvaag = cantsvaag + 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }else{
         document.getElementById('can-PC').disabled = true;
         document.getElementById('can-PC').selectedIndex = 0
+        cantsvaag = cantsvaag - 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }
 })
 document.getElementById('c-WP').addEventListener('change', event =>{
@@ -70,12 +83,16 @@ document.getElementById('c-WP').addEventListener('change', event =>{
         document.getElementById('c-MTW').disabled = true;
         document.getElementById('c-MTH').disabled = true;
         document.getElementById('c-MA').disabled = true;
+        cantsvaag = cantsvaag + 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }else{
         document.getElementById('canWp').disabled = true;
         document.getElementById('canWp').selectedIndex = 0
         document.getElementById('c-MTW').disabled = false;
         document.getElementById('c-MTH').disabled = false;
         document.getElementById('c-MA').disabled = false;
+        cantsvaag = cantsvaag - 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }
 })
 document.getElementById('c-MTW').addEventListener('change', event =>{
@@ -84,12 +101,16 @@ document.getElementById('c-MTW').addEventListener('change', event =>{
         document.getElementById('c-WP').disabled = true;
         document.getElementById('c-MTH').disabled = true;
         document.getElementById('c-MA').disabled = true;
+        cantsvaag = cantsvaag + 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }else{
         document.getElementById('canMTW').disabled = true;
         document.getElementById('c-WP').disabled = false;
         document.getElementById('c-MTH').disabled = false;
         // document.getElementById('c-MA').disabled = false;
         document.getElementById('canMTW').selectedIndex = 0
+        cantsvaag = cantsvaag - 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }
 })
 document.getElementById('c-MTH').addEventListener('change', event =>{
@@ -98,6 +119,8 @@ document.getElementById('c-MTH').addEventListener('change', event =>{
         document.getElementById('c-WP').disabled = true;
         document.getElementById('c-MTW').disabled = true;
         document.getElementById('c-MA').disabled = false;
+        cantsvaag = cantsvaag + 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }else{
         document.getElementById('canMth').disabled = true;
         document.getElementById('c-WP').disabled = false;
@@ -107,18 +130,25 @@ document.getElementById('c-MTH').addEventListener('change', event =>{
         document.getElementById('canMa').disabled = true;
         document.getElementById('canMa').selectedIndex = 0
         document.getElementById('c-MA').checked = false;
+        cantsvaag = cantsvaag - 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }
 })
 document.getElementById('c-MA').addEventListener('change', event =>{
     if(event.srcElement.checked){
         document.getElementById('canMa').disabled = false;
+        cantsvaag = cantsvaag + 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }else{
         document.getElementById('canMa').disabled = true;
         document.getElementById('canMa').selectedIndex = 0
+        cantsvaag = cantsvaag - 1;
+        document.getElementById('can-sva').innerHTML = cantsvaag;
     }
 })
 
 let listCheckbox = ['c-VC', 'c-vD', 'c-PC', 'c-WP', 'c-MTW', 'c-MTH', 'c-MA'];
+let total = 0;
 
 document.getElementById('btnventSva').addEventListener('click', event =>{
     let i = 0;
@@ -155,9 +185,9 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
             var textoCelda = document.createTextNode("WIFI PLUS TIPO 1");
             celda.appendChild(textoCelda);
             fila.appendChild(celda);
-
+            total = total + 0;
             var celdatTwo = document.createElement("td");
-            var textoCeldaTwo = document.createTextNode("0");
+            var textoCeldaTwo = document.createTextNode(0);
             celdatTwo.appendChild(textoCeldaTwo);
             fila.appendChild(celdatTwo);
 
@@ -171,6 +201,7 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
             fila.appendChild(celda);
 
             var celdatTwo = document.createElement("td");
+            total = total + 15000;
             var textoCeldaTwo = document.createTextNode("15000");
             celdatTwo.appendChild(textoCeldaTwo);
             fila.appendChild(celdatTwo);
@@ -184,7 +215,7 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
             var textoCelda = document.createTextNode("SVA MÁS VELOCIDAD 100M");
             celda.appendChild(textoCelda);
             fila.appendChild(celda);
-
+            total = total + 25000;
             var celdatTwo = document.createElement("td");
             var textoCeldaTwo = document.createTextNode("25000");
             celdatTwo.appendChild(textoCeldaTwo);
@@ -202,9 +233,9 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
                 var textoCelda = document.createTextNode("PUNTO CABLEADO");
                 celda.appendChild(textoCelda);
                 fila.appendChild(celda);
-    
+                total = total + (i >= 2 ? 120000 : 0);
                 var celdatTwo = document.createElement("td");
-                var textoCeldaTwo = document.createTextNode(i >= 2 ? '2000' : '0');
+                var textoCeldaTwo = document.createTextNode(i >= 2 ? '120000' : '0');
                 celdatTwo.appendChild(textoCeldaTwo);
                 fila.appendChild(celdatTwo);
 
@@ -220,7 +251,7 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
             var textoCelda = document.createTextNode("SOLUCIÓN AP MESH 2");
             celda.appendChild(textoCelda);
             fila.appendChild(celda);
-
+            total = total + 8000;
             var celdatTwo = document.createElement("td");
             var textoCeldaTwo = document.createTextNode("8000");
             celdatTwo.appendChild(textoCeldaTwo);
@@ -234,7 +265,7 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
             var textoCelda = document.createTextNode("SOLUCIÓN AP MESH 3");
             celda.appendChild(textoCelda);
             fila.appendChild(celda);
-
+            total = total + 8000;
             var celdatTwo = document.createElement("td");
             var textoCeldaTwo = document.createTextNode("8000");
             celdatTwo.appendChild(textoCeldaTwo);
@@ -249,6 +280,7 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
             var textoCelda = document.createTextNode("SOLUCIÓN AP ADICIONAL");
             celda.appendChild(textoCelda);
             fila.appendChild(celda);
+            total = total + 4000;
 
             var celdatTwo = document.createElement("td");
             var textoCeldaTwo = document.createTextNode("4000");
@@ -258,7 +290,7 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
             document.getElementById('table-sva-info').appendChild(fila);
         }
 
-
+        document.getElementById('total-sva').innerHTML = total;
 
 
 
