@@ -495,7 +495,7 @@
     }
   }
 /* ocultar pasos */
-#paso-2, #paso-3, #paso-6, #paso-4, #paso-5, #paso-7, #paso-8{
+#paso-2, #paso-3, #paso-6, #paso-1, #paso-5, #paso-7, #paso-8{
     display: none;
 }
 #con-venta-SVA{
@@ -1656,4 +1656,8 @@ label img{
 button img{
     height: 20px;
     margin-left: 10px;
+}
+.first{
+    background-color: rgb(221, 105, 76);
+    color: white;
 }

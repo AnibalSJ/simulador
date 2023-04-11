@@ -207,17 +207,14 @@ function btn_estado() {
     btn_estado3.disabled = false;
 }
 
+
 btn_visita.addEventListener('click', () =>{
-    if(btn_activar == 2){
+    if(btn_activar >= 2){
         modal_visit.style.display = 'block';
         paso_4.style.display = 'none';
     }else{
-        modal_punto_activar.style.display = 'block';
-        document.getElementById('btn-modal-servicios').addEventListener('click', ()=>{
-            $( document ).ready(function() {
-                $('#modal-punto-activar').modal('hide')
-            });          
-        });
+        // modal_punto_activar.style.display = 'block';
+        $('#modal-punto-activar').modal('toggle')
     }
     
 });

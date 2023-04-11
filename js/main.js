@@ -96,13 +96,13 @@ function alerterroraudio(idAudio){
     if(!audioR){
         // alert('repro audio');
         idAudio.play();
-        idAudio.currentTime = 0;
+        // idAudio.currentTime = 0;
         idAudioRepro = idAudio;
         audioR = !audioR;
     }else{
         // alert('pausar audio')
         idAudioRepro.pause();
-        idAudioRepro.currentTime = 0;
+        // idAudioRepro.currentTime = 0;
         idAudioRepro = idAudio;
         idAudio.play()
     }
@@ -523,3 +523,8 @@ document.getElementById('btn-paso-8').addEventListener('click', ()=>{
     }
     
 });
+document.getElementById('btn-modal-ps4error').addEventListener('click', event=>{
+    $( document ).ready(function() {
+        $('#modal-punto-activar').modal('hide')
+    });
+})

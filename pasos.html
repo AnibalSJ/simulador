@@ -29,7 +29,7 @@
             <div class="con-info-u">
                 <div class="info-u">
                     <img src="./assets/img/user.png" alt="">
-                    <p>Usuario</p>
+                    <p>Escuela digital</p>
                 </div>
             </div>
             <div class="menu-drown" id="menu-drown">
@@ -86,10 +86,10 @@
                     </ul>
                 </div>
                 <div class="con-action-paso-1">
-                    <div class="ac-p-1" id="ac-p-1-al"><img src="./assets/img/interrogatorio.svg" alt="" onclick="alerterroraudio('aud-funciones-p1')"></div>
-                    <audio id="aud-funciones-p1" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 1/643358c519b8e5.27766907.m4a">
-                    </audio>
+                    <div class="ac-p-1" id="ac-p-1-al"><img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('audio-ubi-ont')"></div>
+                        <audio id="audio-ubi-ont" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 1/643358c519b8e527766907_JCRbpcWn.mp3">
+                        </audio>
                     <div class="ac-p-1" onclick="modalUbi()"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="ac-p-1"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
                     <div class="ac-p-1"><i class="fa-regular fa-floppy-disk"></i></div>
@@ -104,7 +104,7 @@
                     <div class="serv-paso-2" id="serv-paso-2">
                         <label for="">ONT 1 <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-ont-pa2')"></label>
                         <audio id="au-ont-pa2" controls class="audio" style="display: none;">
-                            <source type="audio/wav" src="./assets/audio/Paso 2/6433594b829a97.51651101.m4a">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/ONT.mp3">
                         </audio>
                         <select name="" id="ont-select-p2">
                             <option value="" disabled>Seleccione un opción...</option>
@@ -266,9 +266,9 @@
                         <tbody>
                             <tr class="odd">
                                 <td>ACCESO DE RED <p id="serialps3-ont">SerialEquipo : </p></td>
-                                <td><button class="activar first" value="estado-1">Inactivar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="au-serv-ac-p4" onclick="alertAudio('')"></label></td>
+                                <td><button class="activar first" value="estado-1">Inactivar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="au-serv-ac-p4" onclick="alertAudio('au-serv-ac-p4')"></label></td>
                                 <audio id="au-serv-ac-p4" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335c9a92b3c6.78435718.m4a">
+                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335c9a92b3c678435718_nijqz5g1.mp3">
                                 </audio>
                                 <td class="estado-td-p4" id="estado-1">50 - Activación Completa </td>
                             </tr>
@@ -276,7 +276,7 @@
                                 <td>INTERNET (MAS PRODUCTO) <p>PLAN 300M/300M</p></td>
                                 <td><button class="activar" value="estado-2" id="btn_prueba">Activar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-serv-err-p4')"></label></td>
                                 <audio id="au-serv-err-p4" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335d02a23417.34681469.m4a">
+                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335d02a2341734681469_WB3heVci.mp3">
                                 </audio>
                                 <td class="estado-td-p4" id="estado-2">10 - Pendiente Activación</td>
                             </tr>
@@ -284,7 +284,7 @@
                                 <td>LINEA TELEFONICA <p>USERNUM : 576012778376</p></td>
                                 <td><button class="activar" value="estado-3" id="btn-estado3" disabled>Activar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-alerts-ser-p4')"></label></td>
                                 <audio id="au-alerts-ser-p4" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335dc0da5be8.6414729.m4a">
+                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335dc0da5be86414729_JOBhhXk8.mp3">
                                 </audio>
                                 <td class="estado-td-p4" id="estado-3">10 - Pendiente Activación</td>
                             </tr>
@@ -1117,7 +1117,7 @@
 
           <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-cienpdos')">
                                   <audio id="au-cienpdos" controls class="audio">
-                            <source type="audio/wav" src="./assets/audio/Paso 2/643359d407d011.34217340.m4a">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/100 M.mp3">
                         </audio>
           <input type="checkbox" name="" id="c-vD">
           <h5>SVA MAS VELOCIDAD 100M</h5>
@@ -1305,7 +1305,7 @@
           <p>No se activaron todos los servicios</p>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-modal-servicios">ACEPTAR</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-modal-ps4error">ACEPTAR</button>
         </div>
       </div>
     </div>
