@@ -156,7 +156,7 @@ document.getElementById('btnventSva').addEventListener('click', event =>{
         if(document.getElementById(checkbox).checked){
             listSVAShop.push({
                 name: checkbox,
-                cantidad: document.getElementById(listSelects[iterable]).value
+                cantidad: document.getElementById(listSelects[i]).value
             });
             if(checkbox == 'c-MTW'){
                 listSVAShop[listSVAShop.length - 1].apUno = '0';
