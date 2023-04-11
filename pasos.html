@@ -13,7 +13,9 @@
     <title>Document</title>
 </head>
 <body>
-
+    <script>
+        let ontValue = 0;
+    </script>
     <div class="contenedor-principal container-portal">
 
         <div class="info">
@@ -60,7 +62,7 @@
                     <li class="nav-item nav-item-alert"><a class="nav-link">
                         <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('audio-acPe')">
                         <audio id="audio-acPe" controls class="audio">
-                            <source type="audio/wav" src="./assets/audio/Login.mp3">
+                            <source type="audio/wav" src="./assets/audio/pasoapaso.m4a">
                         </audio>
                     </a></li>   
                 </ul>
@@ -73,7 +75,7 @@
                 <div class="item-ac">
                     <p class="cabecera">ACCESO DE RED <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('audio-acceso-red')"></p>
                     <audio id="audio-acceso-red" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 1/643358933d58a9.97259267.mp3">
+                        <source type="audio/wav" src="./assets/audio/Paso 1/643358933d58a9.97259267.m4a">
                     </audio>
                     <ul>
                         <li>
@@ -84,9 +86,9 @@
                     </ul>
                 </div>
                 <div class="con-action-paso-1">
-                    <div class="ac-p-1" id="ac-p-1-al"><img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-funciones-p1')"></div>
-                    <audio id="au-funciones-p1" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 1/643358c519b8e5.27766907.mp3">
+                    <div class="ac-p-1" id="ac-p-1-al"><img src="./assets/img/interrogatorio.svg" alt="" onclick="alerterroraudio('aud-funciones-p1')"></div>
+                    <audio id="aud-funciones-p1" controls class="audio" style="display: none;">
+                        <source type="audio/wav" src="./assets/audio/Paso 1/643358c519b8e5.27766907.m4a">
                     </audio>
                     <div class="ac-p-1" onclick="modalUbi()"><i class="fa-solid fa-location-dot"></i></div>
                     <div class="ac-p-1"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
@@ -102,15 +104,15 @@
                     <div class="serv-paso-2" id="serv-paso-2">
                         <label for="">ONT 1 <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-ont-pa2')"></label>
                         <audio id="au-ont-pa2" controls class="audio" style="display: none;">
-                            <source type="audio/wav" src="./assets/audio/Paso 2/6433594b829a97.51651101.mp3">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/6433594b829a97.51651101.m4a">
                         </audio>
-                        <select name="" id="">
+                        <select name="" id="ont-select-p2">
                             <option value="" disabled>Seleccione un opción...</option>
-                            <option value="">ZTEGC8FEAFD1-Remanufacturado</option>
-                            <option value="">ALCLB2938591-Remanufacturado</option>
-                            <option value="">ALCLB3B42228 - Remanufacturado</option>
-                            <option value="">ALCLB2F39810 - Remanufacturado</option>
-                            <option value="">ALCLB2F39A01 - Remanufacturado</option>
+                            <option value="ZTEGC8FEAFD1-Remanufacturado">ZTEGC8FEAFD1-Remanufacturado</option>
+                            <option value="ALCLB2938591-Remanufacturado">ALCLB2938591-Remanufacturado</option>
+                            <option value="ALCLB3B42228 - Remanufacturado">ALCLB3B42228 - Remanufacturado</option>
+                            <option value="ALCLB2F39810 - Remanufacturado">ALCLB2F39810 - Remanufacturado</option>
+                            <option value="ALCLB2F39A01 - Remanufacturado">ALCLB2F39A01 - Remanufacturado</option>
                         </select>
                         <br> 
 
@@ -139,7 +141,7 @@
                 <div class="item-ac">
                     <p class="cabecera">ACCESO DE RED <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('audio-acceso-red-paso-3')"></p>
                     <audio id="audio-acceso-red-paso-3" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 3/64335c147334c3.52840870.mp3">
+                        <source type="audio/wav" src="./assets/audio/Paso 3/64335c147334c3.52840870.m4a">
                     </audio>
                     <ul>
                         <li>
@@ -185,7 +187,7 @@
                         <li>
                             <img src="./assets/img/arrow-turn-down-right.svg" alt="">
                             <img src="./assets/img/file.svg" alt="">
-                            <p>NAP: N1TO16_A1</p>
+                            <p>NAP: N2CO23_L2</p>
                         </li>
                         <li>
                             <img src="./assets/img/arrow-turn-down-right.svg" alt="">
@@ -195,7 +197,7 @@
                         <li>
                             <img src="./assets/img/arrow-turn-down-right.svg" alt="">
                             <img src="./assets/img/CARPETA.png" alt="">
-                            <p>SerialEquipo: ALCLB2BF4F8B</p>
+                            <p>SerialEquipo: </p> <p id="ont-ps3"></p>
                         </li>
                     </ul>
                 </div>
@@ -203,7 +205,7 @@
                 <div class="item-ac">
                     <p class="cabecera">Internet  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-internet-p3')"></p>
                     <audio id="au-internet-p3" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 3/64335c2c289d66.76373338.mp3">
+                        <source type="audio/wav" src="./assets/audio/Paso 3/64335c2c289d66.76373338.m4a">
                     </audio>
                     <ul>
                         <li>
@@ -228,7 +230,7 @@
                 <div class="item-ac">
                     <p class="cabecera">Linea Telefonica  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-telefonita-p3')"></p>
                     <audio id="au-telefonita-p3" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 3/64335c46dc81e9.79039404.mp3">
+                        <source type="audio/wav" src="./assets/audio/Paso 3/64335c46dc81e9.79039404.m4a">
                     </audio>
                     <ul>
                         <li>
@@ -251,7 +253,7 @@
               </div>
 
               <!-- paso 4 -->
-              <div class="paso" id="paso-4">
+                         <div class="paso" id="paso-4">
                 <div class="con-serv-paso-4">
                     <table>
                         <thead>
@@ -263,26 +265,26 @@
                         </thead>
                         <tbody>
                             <tr class="odd">
-                                <td>ACCESO DE RED <p>SerialEquipo : ZTEQA046C595</p></td>
-                                <td><button class="activar" value="estado-1">Activar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="au-serv-ac-p4" onclick="alertAudio('')"></label></td>
+                                <td>ACCESO DE RED <p id="serialps3-ont">SerialEquipo : </p></td>
+                                <td><button class="activar first" value="estado-1">Inactivar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="au-serv-ac-p4" onclick="alertAudio('')"></label></td>
                                 <audio id="au-serv-ac-p4" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335c9a92b3c6.78435718.mp3">
+                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335c9a92b3c6.78435718.m4a">
                                 </audio>
-                                <td class="estado-td-p4" id="estado-1">10 - Pendiente Activación</td>
+                                <td class="estado-td-p4" id="estado-1">50 - Activación Completa </td>
                             </tr>
                             <tr class="even">
-                                <td>INTERNET (MAS PRODUCTO) <p>PLAN 100M/100M + SVA MAS VELOCIDAD 100M</p></td>
-                                <td><button class="activar" value="estado-2">Activar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-serv-err-p4')"></label></td>
+                                <td>INTERNET (MAS PRODUCTO) <p>PLAN 300M/300M</p></td>
+                                <td><button class="activar" value="estado-2" id="btn_prueba">Activar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-serv-err-p4')"></label></td>
                                 <audio id="au-serv-err-p4" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335d02a23417.34681469.mp3">
+                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335d02a23417.34681469.m4a">
                                 </audio>
                                 <td class="estado-td-p4" id="estado-2">10 - Pendiente Activación</td>
                             </tr>
                             <tr class="odd">
-                                <td>LINEA TELEFONICA <p>USERNUM : 5713224967</p></td>
-                                <td><button class="activar" value="estado-3">Activar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-alerts-ser-p4')"></label></td>
+                                <td>LINEA TELEFONICA <p>USERNUM : 576012778376</p></td>
+                                <td><button class="activar" value="estado-3" id="btn-estado3" disabled>Activar</button><label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-alerts-ser-p4')"></label></td>
                                 <audio id="au-alerts-ser-p4" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/64335dc0da5be8.64414729.mp3">
+                                    <source type="audio/wav" src="./assets/audio/Paso 4/64335dc0da5be8.6414729.m4a">
                                 </audio>
                                 <td class="estado-td-p4" id="estado-3">10 - Pendiente Activación</td>
                             </tr>
@@ -294,6 +296,7 @@
                   <button id="btn-visita">Siguiente >></button>
               </div>
            </div>
+
 
            <div class="paso" id="paso-4-after" style="display: none;">
                 <div class="con-serv-paso-4">
@@ -307,7 +310,7 @@
                         </thead>
                         <tbody>
                             <tr class="odd">
-                                <td>ACCESO DE RED <p>SerialEquipo : ZTEQA046C595</p></td>
+                                <td>ACCESO DE RED  <p id="serialps3-ont-2">SerialEquipo : </p></td>
                                 <td><button class="activar-after">Inactivar</button></td>
                                 <td class="estado" id="estado">50 - Activación Completa</td>
                             </tr>
@@ -342,10 +345,6 @@
                                 <span><p>FTTH</p></span>
                             </div>
                             <div class="content-item">
-                                <label for="">POTENCIA</label> 
-                                <span><p><img src="./assets/img/trafficlight-green.png"></p></span>
-                            </div>
-                            <div class="content-item">
                                 <label for="">Estado Servicio</label> 
                                 <span><p><img src="./assets/img/trafficlight-green.png"></p></span>
                             </div>
@@ -366,13 +365,30 @@
                                     </tr>
                                 </tbody>
                             </table>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Servicio</th>
+                                        <th>Atributos</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd">
+                                        <td>Potencia</td>
+                                        <td>-18.418</td>
+                                        <td class="content-img"><img src="./assets/img/trafficlight-green.png"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                         <br>
                         <div class="item-acce">
                             <p class="cabecera">Linea Telefonica</p>
                             <div class="content-item">
                                 <label for="">IMPU</label> 
-                                <span><p>tel: +5713224987</p></span>
+                                <span><p>tel: +576012778376</p></span>
                             </div>
                             <div class="content-item">
                                 <label for="">ACS</label> 
@@ -464,8 +480,8 @@
                                 </thead>
                                 <tbody>
                                     <tr class="odd">
-                                        <td>PLAN 100M/50M</td>
-                                        <td>VelocidadBajada: 200M <p>VelocidadSubida: 100M</p></td>
+                                        <td>PLAN 300M/300M</td>
+                                        <td>VelocidadBajada: 300M <p>VelocidadSubida: 300M</p></td>
                                         <td class="content-img"><img src="./assets/img/trafficlight-green.png"></td>
                                     </tr>
                                     <tr class="odd">
@@ -489,14 +505,14 @@
                     <button id="btn-paso-v-4"><< Anterior</button>
                     <button id="btn-paso-6">Siguiente >></button>
                 </div>
-            </div>  
+            </div>
 
               <!-- paso 6 -->
               <div class="paso" id="paso-6">
                 <br>
-                <h3>Registar Material <label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('register-material-p6')"></label></h3>
+                <h3>Registrar Material <label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('register-material-p6')"></label></h3>
                 <audio id="register-material-p6" controls class="audio" style="display: none;">
-                    <source type="audio/wav" src="./assets/audio/Paso 6/Registral material.mp3">
+                    <source type="audio/wav" src="./assets/audio/Paso 6/Registral material.m4a">
                 </audio>
                 <div class="con-table-paso-6">
                   <table id="register-inventario">
@@ -510,15 +526,18 @@
                     <tbody id="tbody-material">
                       <tr id="fila-in-0">
                         <td><select name="" id="tipo-material-0">
-                          <option value="noserial">No serializado</option>
-                          <option value="b">b</option>
-                          <option value="c">c</option>
+                          <option value="noserial" selected>No serializado</option>
+                          <option value="serial">Serializado</option>
                         </select></td>
                         <td>
                           <select name="" id="material-0">
-                            <option value="Cable UTP CAT 6">Cable UTP CAT 6</option>
-                            <option value=""></option>
-                            <option value=""></option>
+                            <option value="Cable UTP CAT 6">CONECTOR MECANICO OPTICO ODN SC-APC 8°</option>
+                            <option value="">CABLE FO DROP BAJA FRICCION 1 HILO</option>
+                            <option value="">CABLE UTP CAT 6</option>
+                            <option value="">TOMA DE PARED FO</option>
+                            <option value="">DROP 1 HILO INDOOR/OUTDOOR</option>
+                            <option value="">HERRAJE RETENCION FO AREA DROP 1 HILO</option>
+                            <option value="">CAJA DISTRIBUCION DE FO PISO 4 SALIDAS</option>
                           </select>
                         </td>
                         <td>
@@ -534,7 +553,7 @@
                   <br>
                   <h4>Observaciones <label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-obser-p6')"></label></h4>
                   <audio id="au-obser-p6" controls class="audio" style="display: none;">
-                    <source type="audio/wav" src="./assets/audio/Paso 6/Observaciones.mp3">
+                    <source type="audio/wav" src="./assets/audio/Paso 6/Observaciones.m4a">
                 </audio>
                   <textarea name="" id="" cols="30" rows="10"></textarea>
                   <div class="con-action-t-6">
@@ -543,7 +562,7 @@
                   <br>
                   <h5>Inventario Registrado <label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-inv-pso4')"></label></h5>
                   <audio id="au-inv-pso4" controls class="audio" style="display: none;">
-                    <source type="audio/wav" src="./assets/audio/Paso 6/Inventario.mp3">
+                    <source type="audio/wav" src="./assets/audio/Paso 6/Inventario.m4a">
                 </audio>
                   <div class="con-tabla-in-6">
                     <table>
@@ -555,21 +574,9 @@
                       </tr>
                       <tr>
                         <td>Serializado</td>
-                        <td>ONT ZXHN F620E 200mW+ACCESORIOS ZTE</td>
-                        <td>ZTEGC1D36799</td>
+                        <td id="nombretdontps6">ONT ZXHN F620E 200mW+ACCESORIOS ZTE</td>
+                        <td id="serialtdontps6">ZTEGC1D36799</td>
                         <td>ONT</td>
-                      </tr>
-                      <tr>
-                        <td>Serializado</td>
-                        <td>ACCESS POINT WIFI</td>
-                        <td>3204207009620</td>
-                        <td>AP</td>
-                      </tr>
-                      <tr>
-                        <td>Serializado</td>
-                        <td>STB MARCA HUAWEI</td>
-                        <td>21500821467UF7459226</td>
-                        <td>STB</td>
                       </tr>
                     </table>
                   </div>
@@ -577,7 +584,7 @@
                   <div class="con-prox-act">
                    <label for="">Proxima Actividad <label for=""> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-prox-act-p6')"></label></label>
                    <audio id="au-prox-act-p6" controls class="audio" style="display: none;">
-                    <source type="audio/wav" src="./assets/audio/Paso 6/Proxima actividad.mp3">
+                    <source type="audio/wav" src="./assets/audio/Paso 6/Proxima actividad.m4a">
                 </audio>
                    <select name="" id="">
                     <option value="">MDM-FIBRA-002325839-KR 28 46 72 AP 501-Instalación FTTH</option>
@@ -594,9 +601,9 @@
               <!-- paso 7 -->
               <div class="paso" id="paso-7">
                 <div class="btn-boleta">
-                    <button class="boleta" id="cliente">LORENZA VILLA SOSA DIAS  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-usuarios-bole')"></button>
+                    <button class="boleta" id="cliente">NICOL PINEDA MUÑOZ <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-usuarios-bole')"></button>
                     <audio id="au-usuarios-bole" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 7/Usuarios para Boleta Dígital.mp3">
+                        <source type="audio/wav" src="./assets/audio/Paso 7/Usuarios para boleta digital.m4a">
                     </audio>
                     <button class="boleta">Contacto</button>
                     <button class="boleta">Otro</button>
@@ -625,7 +632,7 @@
                         <div class="item-acce">
                             <p class="cabecera">Punto Cableado  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-punto-cableado-p7')"></p>
                             <audio id="au-punto-cableado-p7" controls class="audio" style="display: none;">
-                                <source type="audio/wav" src="./assets/audio/Paso 7/Punto cableado.mp3">
+                                <source type="audio/wav" src="./assets/audio/Paso 7/Punto cableado.m4a">
                             </audio>
                             <div class="item-formato">
                                 <div class="item-option">
@@ -662,7 +669,7 @@
                                         </select></span>
 
                                         <label for="">Banda de conexión</label>
-                                        <input type="text" name="" id="" value="">
+                                        <input type="text" name="" id="" value="CABLEADO" disabled>
 
                                         <div class="content-boleta">
                                             <label for="">Configuro 1?</label>
@@ -700,7 +707,7 @@
                         <div class="item-acce">
                             <p class="cabecera">Ubicacion equipo terminal ONT  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-ubiont-ps7')"></p>
                             <audio id="au-ubiont-ps7" controls class="audio" style="display: none;">
-                                <source type="audio/wav" src="./assets/audio/Paso 7/Ubicación ONT.mp3">
+                                <source type="audio/wav" src="./assets/audio/Paso 7/Ubicación ONT.m4a">
                             </audio>
                             <div class="ubi-ont">
                                 <label for="">Sugerida por el técnico de acuerdo a las pruebas técnicas realizadas par amejorar rendimiento del wifi</label>
@@ -714,7 +721,7 @@
                         <div class="item-acce">
                             <p class="cabecera">Mapa de calor  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-map-calor-p7')"></p>
                             <audio id="au-map-calor-p7" controls class="audio" style="display: none;">
-                                <source type="audio/wav" src="./assets/audio/Paso 7/Mapa de calor.mp3">
+                                <source type="audio/wav" src="./assets/audio/Paso 7/Mapa de calor.m4a">
                             </audio>
                             <div class="mapa-calor">
                                 <input type="file" name="" id="" >
@@ -727,7 +734,7 @@
                             <div class="item-acce">
                                 <p class="cabecera">Espacio Habitantes  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-espaciohabi-ps7')"></p>
                                 <audio id="au-espaciohabi-ps7" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/Paso 7/Espacios Habitables.mp3">
+                                    <source type="audio/wav" src="./assets/audio/Paso 7/Espacios Habitables.m4a">
                                 </audio>
                                 <table id="table-espacioes">
                                     <tr>
@@ -777,7 +784,7 @@
                             <div class="item-acce">
                                 <p class="cabecera">Dispositivos adicionales (Sin punto cableado)  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-dispo-adic')"></p>
                                 <audio id="au-dispo-adic" controls class="audio" style="display: none;">
-                                    <source type="audio/wav" src="./assets/audio/Paso 7/Dispositivos adicionales.mp3">
+                                    <source type="audio/wav" src="./assets/audio/Paso 7/Dispositivos adicionales.m4a">
                                 </audio>
                                 <table id="table-diapo">
                                     <tr>
@@ -850,7 +857,7 @@
                         <div class="item-acce">
                             <p class="cabecera">Firma Cliente  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-firm-cliente')"></p>
                             <audio id="au-firm-cliente" controls class="audio" style="display: none;">
-                                <source type="audio/wav" src="./assets/audio/Paso 7/Firma Cliente.mp3">
+                                <source type="audio/wav" src="./assets/audio/Paso 7/Firma Cliente.m4a">
                             </audio>
                             <div class="content-firma">
                                 <div class="firma-cli">
@@ -872,7 +879,7 @@
                         <div class="item-acce">
                             <p class="cabecera">Firma Técnico  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-firm-tec-ps7')"></p>
                             <audio id="au-firm-tec-ps7" controls class="audio" style="display: none;">
-                                <source type="audio/wav" src="./assets/audio/Paso 7/Firma Tecnico.mp3">
+                                <source type="audio/wav" src="./assets/audio/Paso 7/Firma Tecnico.m4a">
                             </audio>
                             <div class="content-firma">
                                 <div class="firma-cli">
@@ -894,7 +901,7 @@
                         <div class="con-btn-paso-2">
                             <button id="btn-guardar-boleta" class="btn-guardar-boleta">GUARDAR BOLETA VISITA  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-guardar-bo-p7')"></button>
                             <audio id="au-guardar-bo-p7" controls class="audio" style="display: none;">
-                                <source type="audio/wav" src="./assets/audio/Paso 7/Guardar boleta.mp3">
+                                <source type="audio/wav" src="./assets/audio/Paso 7/Guardar boleta.m4a">
                             </audio>
                             <button id="btn-paso-8">Siguiente >></button>
                           </div>
@@ -913,7 +920,7 @@
                     <p class="cabecera">
                         <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-ps8-final')">
                         <audio id="au-ps8-final" controls class="audio" style="display: none;">
-                            <source type="audio/wav" src="./assets/audio/Paso 8/Paso 8.mp3">
+                            <source type="audio/wav" src="./assets/audio/Paso 8/Paso 8.m4a">
                         </audio>
                     </p>
                     <div class="final-info">
@@ -924,13 +931,13 @@
                         <span><p>M4347210001220151</p></span>
     
                         <label for="">Bundle Seleccionado</label>
-                        <span><p>DUO 100M HOG - V3</p></span>
+                        <span><p>DUO 300M HOG - V3</p></span>
     
                         <label for="">Tecnología</label>
                         <span><p>FTTH</p></span>
     
                         <label for="">Valor del Servicio</label>
-                        <span><p>$ 145,900,00</p></span>
+                        <span><p>$ 89,300,00</p></span>
     
                         <label for="">Fecha de Agendamiento</label>
                         <span><p>2021/05/01</p></span>
@@ -947,7 +954,7 @@
             </div>
         </div>
     </div>
-<div class="con-info-access" id="con-info-access">
+    <div class="con-info-access" id="con-info-access">
         <div class="header-access">
             <div class="con-btn-ac">
                 <h2>Accesos</h2>
@@ -1096,7 +1103,10 @@
           <h5 class="modal-title">ADICCIÓN SVAs</h5>
         </div>
         <div class="modal-body">
-            <img src="./assets/img/interrogatorio.svg" alt="">
+            <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-ciencip2')">
+                                    <audio id="au-ciencip2" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/643359bc50af61.30852281.m4a">
+                        </audio>
           <input type="checkbox" name="" id="c-VC">
           <h5>SVA MAS VELOCIDAD 50M</h5>
           <select name="" id="can-VC" disabled>
@@ -1105,7 +1115,10 @@
           </select>
           <!-- <input type="number" name="" id="can-vC" placeholder="Cantidad" disabled> -->
 
-          <img src="./assets/img/interrogatorio.svg" alt="">
+          <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-cienpdos')">
+                                  <audio id="au-cienpdos" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/643359d407d011.34217340.m4a">
+                        </audio>
           <input type="checkbox" name="" id="c-vD">
           <h5>SVA MAS VELOCIDAD 100M</h5>
           <select name="" id="can-vD" disabled>
@@ -1113,7 +1126,10 @@
             <option value="1">1</option>
           </select>
 
-          <img src="./assets/img/interrogatorio.svg" alt="">
+          <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-puntocab-p2')">
+                                  <audio id="au-puntocab-p2" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/64335a232e90a3.53172697.m4a">
+                        </audio>
           <input type="checkbox" name="" id="c-PC">
           <h5>PUNTO CABLEADO</h5>
           <select name="" id="can-PC" disabled>
@@ -1127,7 +1143,10 @@
             <option value="7">7</option>
           </select>
 
-          <img src="./assets/img/interrogatorio.svg" alt="">
+          <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-widiplus-p2')">
+                                  <audio id="au-widiplus-p2" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/64335a6c27e225.27896978.m4a">
+                        </audio>
           <input type="checkbox" name="" id="c-WP">
           <h5>WIFI PLUS TIPO 1</h5>
           <select name="" id="canWp" disabled>
@@ -1138,7 +1157,10 @@
             <option value="4">4</option> -->
           </select>
 
-          <img src="./assets/img/interrogatorio.svg" alt="">
+          <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-meshtwop2')">
+                                  <audio id="au-meshtwop2" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/64335b1784da96.77854970.m4a">
+                        </audio>
           <input type="checkbox" name="" id="c-MTW">
           <h5>SOLUCION AP MESH 2</h5>
           <select name="" id="canMTW" disabled>
@@ -1146,7 +1168,10 @@
             <option value="1">1</option>
           </select>
 
-          <img src="./assets/img/interrogatorio.svg" alt="">
+          <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-mesh-thrp2')">
+                                  <audio id="au-mesh-thrp2" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/64335b3fbd0153.86009907.m4a">
+                        </audio>
           <input type="checkbox" name="" id="c-MTH">
           <h5>SOLUCION AP MESH 3</h5>
           <select name="" id="canMth" disabled>
@@ -1154,7 +1179,10 @@
             <option value="1">1</option>
           </select>
 
-          <img src="./assets/img/interrogatorio.svg" alt="">
+          <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-meshadici-p2')">
+                                  <audio id="au-meshadici-p2" controls class="audio">
+                            <source type="audio/wav" src="./assets/audio/Paso 2/64335b599b9489.36218762.m4a">
+                        </audio>
           <input type="checkbox" name="" id="c-MA" disabled>
           <h5>AP MESH ADICIONAL</h5>
           <select name="" id="canMa" disabled>
@@ -1211,7 +1239,7 @@
       <div class="modal-header">
         <h5 class="modal-title">CONFIRMACIÓN <label for="">  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-puntoNor-pso6')"></label></h5>
         <audio id="au-puntoNor-pso6" controls class="audio" style="display: none;">
-            <source type="audio/wav" src="./assets/audio/Paso 6/No retorno.mp3">
+            <source type="audio/wav" src="./assets/audio/Paso 6/No retorno.m4a">
         </audio>
       </div>
       <div class="modal-body">
@@ -1230,7 +1258,7 @@
           <div class="modal-header">
           <h5 class="modal-title">CONTACTO VISITA <label for="">  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-contacto-ps4')"></label></h5>
           <audio id="au-contacto-ps4" controls class="audio" style="display: none;">
-            <source type="audio/wav" src="./assets/audio/Paso 4/64335e3c7d53b6.31250887.mp3">
+            <source type="audio/wav" src="./assets/audio/Paso 4/64335e3c7d53b6.31250887.m4a">
         </audio>
           </div>
           <div class="contact-visit">
@@ -1265,6 +1293,24 @@
       </div>
   </div>
 </div>
+
+<!-- Modal Activar -->
+<div class="modal" tabindex="-1" id="modal-punto-activar">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">SUCCESS </h5>
+        </div>
+        <div class="modal-body">
+          <p>No se activaron todos los servicios</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-modal-servicios">ACEPTAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <!-- Modal boleta -->
 <div class="modal" tabindex="-1" id="modal-punto-exito-bole">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -1307,7 +1353,7 @@
           <h5 class="modal-title">CONFIRMACIÓN</h5>
           </div>
           <div class="confirmacion">
-              <p>INSO041 - Señor Instalador, recuerde que este es el punto de NO RETORNO, por lo tanto, antes de continuar debe verificar en los equipos del cliente la operatividad de la totalidad de los servicios incluidps en la oferta. ¿Está seguro en continuar?</p>
+              <p>INSO041 - Señor Instalador, recuerde que este es el punto de NO RETORNO, por lo tanto, antes de continuar debe verificar en los equipos del cliente la operatividad de la totalidad de los servicios incluidos en la oferta. ¿Está seguro en continuar?</p>
           </div>
           <div class="modal-footer">
               <button type="button" class="btn btn-primary" id="btn-con-n">No</button>
