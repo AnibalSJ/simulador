@@ -29,6 +29,7 @@ document.getElementById('btn-paso-2').addEventListener('click', ()=>{
 });
 document.getElementById('btn-paso-3').addEventListener('click', ()=>{
     //Mostrar la sección 3 y ocultar la sección 2
+    document.getElementById('btn-flujo').style.display = "none";
     ontValue = document.getElementById('ont-select-p2').value
     document.getElementById('ont-ps3').innerHTML = ontValue;
     document.getElementById('ont-ps3').innerHTML = ontValue;
