@@ -656,6 +656,8 @@
     width: 100%;
 }
 #paso-6 table tr td select{
+    padding: 0px;
+    appearance: auto;
     width: 100%;
     min-width: 120px;
 }
@@ -710,6 +712,8 @@
 }
 .con-prox-act select{
     width: 100%;
+    padding: 0px;
+    appearance: auto;
 }
 /* modal punto sin retorno */
 #modal-punto-no-r-6 .modal-dialog{
@@ -1622,25 +1626,25 @@ label img{
     color: #20a4cb;
     font-weight: bold;
 }
-#modal-punto-exito-bole .modal-footer, #modal-punto-fail-bole .modal-footer{
+#modal-punto-exito-bole .modal-footer, #modal-punto-fail-bole .modal-footer, #modal-punto-activar .modal-footer{
     border: none;
 }
-#modal-punto-exito-bole .modal-body p, #modal-punto-fail-bole .modal-body p{
+#modal-punto-exito-bole .modal-body p, #modal-punto-fail-bole .modal-body p, #modal-punto-activar .modal-body{
     text-align: center;
     color: #20A4CB;
 }
-#modal-punto-exito-bole .modal-content, #modal-punto-fail-bole .modal-content{
+#modal-punto-exito-bole .modal-content, #modal-punto-fail-bole .modal-content, #modal-punto-activar .modal-content{
     width: 320px;
 }
-#modal-punto-exito-bole .modal-footer, #modal-punto-fail-bole .modal-footer{
+#modal-punto-exito-bole .modal-footer, #modal-punto-fail-bole .modal-footer, #modal-punto-activar .modal-footer{
     display: grid;
     justify-content: center;
 }
-#modal-punto-exito-bole button, #modal-punto-fail-bole button{
+#modal-punto-exito-bole button, #modal-punto-fail-bole button, #modal-punto-activar button{
     background: #dd694c;
     border: none;
 }
-#modal-punto-exito-bole .modal-dialog, #modal-punto-fail-bole .modal-dialog{
+#modal-punto-exito-bole .modal-dialog, #modal-punto-fail-bole .modal-dialog, #modal-punto-activar .modal-dialog{
     display: grid;
     justify-content: center;
 }
