@@ -1,4 +1,4 @@
-
+let contadorRegistros = 1;
 let inventario = [{
     id: 0,
         tipoMaterial: document.getElementById(`tipo-material-0`).value,
@@ -19,8 +19,8 @@ document.getElementById('agregar-in').addEventListener('click', event =>{
     option.text = "No serializado";
     select.appendChild(option);
     option = document.createElement('option');
-    option.value = "c";
-    option.text = "c";
+    option.value = "Serializado";
+    option.text = "Serializado";
     select.appendChild(option);
     td.appendChild(select);
     tr.appendChild(td);
@@ -29,13 +29,40 @@ document.getElementById('agregar-in').addEventListener('click', event =>{
     select = document.createElement('select');
     select.setAttribute("id", `material-${contadorRegistros}`);
     option = document.createElement('option');
-    option.value = "Cable";
-    option.text = "Cable";
+    option.value = "CONECTOR MECANICO OPTICO ODN SC-APC 8°";
+    option.text = "CONECTOR MECANICO OPTICO ODN SC-APC 8°";
     select.appendChild(option);
+
     option = document.createElement('option');
-    option.value = "Cable2";
-    option.text = "Cable 2";
+    option.value = "CABLE FO DROP BAJA FRICCION 1 HILO";
+    option.text = "CABLE FO DROP BAJA FRICCION 1 HILO";
     select.appendChild(option);
+
+    option = document.createElement('option');
+    option.value = "CABLE UTP CAT 6";
+    option.text = "CABLE UTP CAT 6";
+    select.appendChild(option);
+
+    option = document.createElement('option');
+    option.value = "TOMA DE PARED FO";
+    option.text = "TOMA DE PARED FO";
+    select.appendChild(option);
+
+    option = document.createElement('option');
+    option.value = "DROP 1 HILO INDOOR/OUTDOOR";
+    option.text = "DROP 1 HILO INDOOR/OUTDOOR";
+    select.appendChild(option);
+
+    option = document.createElement('option');
+    option.value = "HERRAJE RETENCION FO AREA DROP 1 HILO";
+    option.text = "HERRAJE RETENCION FO AREA DROP 1 HILO";
+    select.appendChild(option);
+
+    option = document.createElement('option');
+    option.value = "CAJA DISTRIBUCION DE FO PISO 4 SALIDAS";
+    option.text = "CAJA DISTRIBUCION DE FO PISO 4 SALIDAS";
+    select.appendChild(option);
+
     td.appendChild(select);
     tr.appendChild(td);
 
@@ -85,7 +112,6 @@ document.getElementById('agregar-in').addEventListener('click', event =>{
                 estadoGuardado = false;
             })
             document.getElementById(`cantidad-${contadorRegistros}`).addEventListener('change', event=>{
-                alert('aaaa')
                 element.cantidad = document.getElementById(`cantidad-${contadorRegistros-1}`).value;
                 estadoGuardado = false;
             })

@@ -1,12 +1,14 @@
 const paso_4 = document.getElementById('paso-4');
+const paso_3 = document.getElementById('paso-3');
 const paso_4_after = document.getElementById('paso-4-after');
 const paso_5 = document.getElementById('paso-5');
+const paso_6 = document.getElementById('paso-6');
 const paso_7 = document.getElementById('paso-7');
 const paso_8 = document.getElementById('paso-8');
 const btn_visita = document.getElementById('btn-visita');
 const modal_visit = document.getElementById('modal-visit');
 const modal_confirm = document.getElementById('modal-confirm');
-
+const modal_punto_activar = document.getElementById('modal-punto-activar');
 document.getElementById('btn-paso-2').addEventListener('click', ()=>{
     //Mostrar la sección 2 y ocultar la sección 1
     $( document ).ready(function() {
@@ -27,6 +29,13 @@ document.getElementById('btn-paso-2').addEventListener('click', ()=>{
 });
 document.getElementById('btn-paso-3').addEventListener('click', ()=>{
     //Mostrar la sección 3 y ocultar la sección 2
+    ontValue = document.getElementById('ont-select-p2').value
+    document.getElementById('ont-ps3').innerHTML = ontValue;
+    document.getElementById('ont-ps3').innerHTML = ontValue;
+    document.getElementById('serialps3-ont').innerHTML = `Serial equipo: ${ontValue}`;
+    document.getElementById('serialps3-ont-2').innerHTML = `Serial equipo: ${ontValue}`;
+    document.getElementById('nombretdontps6').innerHTML = `Serial equipo: ${ontValue}`;
+    document.getElementById('serialtdontps6').innerHTML = `Serial equipo: ${ontValue}`;
     $( document ).ready(function() {
         $('#modal-loading').modal('toggle')
     });
@@ -179,28 +188,38 @@ document.getElementById('btn-paso-7').addEventListener('click', ()=>{
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 const activar = document.querySelectorAll('.activar');
+let btn_activar = 0;
 activar.forEach(btn =>{
     btn.addEventListener('click', event =>{
         btn.style.backgroundColor = '#dd694c';
         btn.textContent = 'Inactivar';
         document.getElementById(`${btn.value}`).innerHTML = "50 - Activación Completa";
+        btn_estado();
+        
+        btn_activar += 1;
+
+        return btn_activar;
     });
 });
 
-// function activar_btn(event, value){
-//     const id = event.target;
-//     id.style.backgroundColor = '#dd694c';
-//     id.textContent = 'Inactivar';
-//     cambiar_estado(value);
-// }
-// function cambiar_estado(id){
-//     document.getElementById(id).innerHTML = "50 - Activación Completa";
-// }
+function btn_estado() {
+    let btn_estado3 = document.getElementById('btn-estado3');
+    btn_estado3.disabled = false;
+}
 
 btn_visita.addEventListener('click', () =>{
+    if(btn_activar == 2){
+        modal_visit.style.display = 'block';
+        paso_4.style.display = 'none';
+    }else{
+        modal_punto_activar.style.display = 'block';
+        document.getElementById('btn-modal-servicios').addEventListener('click', ()=>{
+            $( document ).ready(function() {
+                $('#modal-punto-activar').modal('hide')
+            });          
+        });
+    }
     
-    modal_visit.style.display = 'block';
-    paso_4.style.display = 'none';
 });
 
 // Enviar SMS

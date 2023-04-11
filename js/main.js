@@ -74,8 +74,25 @@ function drownAct(parametro){
 //     }
 // }
 function alertAudio(idAudio){
-    console.log(idAudio)
     idAudio = document.getElementById(idAudio);
+    console.log(idAudio)
+    if(!audioR){
+        // alert('repro audio');
+        idAudio.play();
+        idAudio.currentTime = 0;
+        idAudioRepro = idAudio;
+        audioR = !audioR;
+    }else{
+        // alert('pausar audio')
+        idAudioRepro.pause();
+        idAudioRepro.currentTime = 0;
+        idAudioRepro = idAudio;
+        idAudio.play()
+    }
+}
+function alerterroraudio(idAudio){
+    idAudio = document.getElementById(idAudio);
+    console.log(idAudio)
     if(!audioR){
         // alert('repro audio');
         idAudio.play();
@@ -480,7 +497,7 @@ document.getElementById('btn-guardar-boleta').addEventListener('click', event=>{
     $( document ).ready(function() {
         $('#modal-punto-exito-bole').modal('toggle')
     });
-    estadoBoleta = !estadoBoleta;
+    estadoBoleta = true;
 })
 
 document.getElementById('btn-paso-8').addEventListener('click', ()=>{
