@@ -11,33 +11,32 @@ document.getElementById('con-venta-SVA').addEventListener("click", event =>{
     $( document ).ready(function() {
         $('#modal-sva').modal('show')
     });
-    listSVAShop = [];
-    document.getElementById('c-VC').checked = false;
-    document.getElementById('can-VC').disabled = true;
-    document.getElementById('can-VC').selectedIndex = 0
-    document.getElementById('c-VC').checked = false;
+    // document.getElementById('c-VC').checked = false;
+    // document.getElementById('can-VC').disabled = true;
+    // document.getElementById('can-VC').selectedIndex = 0
+    // document.getElementById('c-VC').checked = false;
     
-    document.getElementById('c-vD').checked = false;
-    document.getElementById('can-vD').disabled = true;
-    document.getElementById('can-vD').selectedIndex = 0
+    // document.getElementById('c-vD').checked = false;
+    // document.getElementById('can-vD').disabled = true;
+    // document.getElementById('can-vD').selectedIndex = 0
 
-    document.getElementById('c-PC').checked = false;
-    document.getElementById('can-PC').disabled = true;
-    document.getElementById('can-PC').selectedIndex = 0
+    // document.getElementById('c-PC').checked = false;
+    // document.getElementById('can-PC').disabled = true;
+    // document.getElementById('can-PC').selectedIndex = 0
     
-    document.getElementById('c-WP').checked = false;
-    document.getElementById('canWp').disabled = true;
-    document.getElementById('canWp').selectedIndex = 0
-    document.getElementById('c-MTW').disabled = false;
-    document.getElementById('c-MTH').disabled = false;
-    document.getElementById('c-MA').disabled = false;
-    
-    document.getElementById('c-MA').checked = false;
-    document.getElementById('canMTW').disabled = true;
-    document.getElementById('c-WP').disabled = false;
-    document.getElementById('c-MTH').disabled = false;
+    // document.getElementById('c-WP').checked = false;
+    // document.getElementById('canWp').disabled = true;
+    // document.getElementById('canWp').selectedIndex = 0
+    // document.getElementById('c-MTW').disabled = false;
+    // document.getElementById('c-MTH').disabled = false;
     // document.getElementById('c-MA').disabled = false;
-    document.getElementById('canMTW').selectedIndex = 0
+    
+    // document.getElementById('c-MA').checked = false;
+    // document.getElementById('canMTW').disabled = true;
+    // document.getElementById('c-WP').disabled = false;
+    // document.getElementById('c-MTH').disabled = false;
+    // // document.getElementById('c-MA').disabled = false;
+    // document.getElementById('canMTW').selectedIndex = 0
 })
 
 // Habilitar cantidad con los checkbox de sva
