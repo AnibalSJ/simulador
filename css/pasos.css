@@ -1661,3 +1661,47 @@ button img{
     background-color: rgb(221, 105, 76);
     color: white;
 }
+
+/* ___________________________________________________________________________________ */
+
+.con-btn-flujo{
+    background: #F26922;
+    color: white;
+    font-size: 22px;
+    width: 140px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+    height: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: fixed;
+    left: 410px;
+    top: calc(100vh - 40px);
+    display: grid;
+    align-items: center;
+    cursor: pointer;
+}
+#modal-flujo .modal-dialog{
+    display: grid;
+    justify-content: center;
+}
+#modal-flujo .modal-content{
+    width:70vw;
+    height: 700px;
+}
+#recomendador{
+    width: 100%;
+    height: 100%;
+}
+#modal-flujo .modal-header{
+    background: #F26922;
+    color: white;
+    padding: 0px;
+    cursor: pointer;
+}
+#modal-flujo .modal-title{
+    padding: 10px 0px;
+    color: white;    
+}
+#modal-flujo .modal-body{
+    padding: 0px 10px;
+}
