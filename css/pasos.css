@@ -24,8 +24,6 @@
     padding: 0;
 }
 
-.sw-theme-arrows > ul.step-anchor > li {
-}
 
 .sw-theme-arrows > ul.step-anchor > li > a, .sw-theme-arrows > ul.step-anchor > li > a:hover {
     color: #bbb;
@@ -85,9 +83,6 @@
 
 .sw-theme-arrows > ul.step-anchor > li > a:hover:after {
     border-left-color: #f5f5f5;
-}
-
-.sw-theme-arrows > ul.step-anchor > li > a small {
 }
 
     .sw-theme-arrows > ul.step-anchor > li.clickable > a:hover {
@@ -495,7 +490,7 @@
     }
   }
 /* ocultar pasos */
-#paso-2, #paso-3, #paso-6, #paso-4, #paso-5, #paso-7, #paso-8{
+#paso-2, #paso-3, #paso-6, #paso-4, #paso-5, #paso-1, #paso-8{
     display: none;
 }
 #con-venta-SVA{
@@ -636,7 +631,7 @@
 .con-btn-paso-2{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 170PX);
+    grid-template-columns: repeat(2, 210PX);
     grid-template-rows: 30px;
     column-gap: 20px;
 }
@@ -1626,25 +1621,25 @@ label img{
     color: #20a4cb;
     font-weight: bold;
 }
-#modal-punto-exito-bole .modal-footer, #modal-punto-fail-bole .modal-footer, #modal-punto-activar .modal-footer{
+.modal-success-sim .modal-footer{
     border: none;
 }
-#modal-punto-exito-bole .modal-body p, #modal-punto-fail-bole .modal-body p, #modal-punto-activar .modal-body{
+.modal-success-sim .modal-body p{
     text-align: center;
     color: #20A4CB;
 }
-#modal-punto-exito-bole .modal-content, #modal-punto-fail-bole .modal-content, #modal-punto-activar .modal-content{
+.modal-success-sim .modal-content{
     width: 320px;
 }
-#modal-punto-exito-bole .modal-footer, #modal-punto-fail-bole .modal-footer, #modal-punto-activar .modal-footer{
+.modal-success-sim .modal-footer{
     display: grid;
     justify-content: center;
 }
-#modal-punto-exito-bole button, #modal-punto-fail-bole button, #modal-punto-activar button{
+.modal-success-sim button{
     background: #dd694c;
     border: none;
 }
-#modal-punto-exito-bole .modal-dialog, #modal-punto-fail-bole .modal-dialog, #modal-punto-activar .modal-dialog{
+.modal-success-sim .modal-dialog{
     display: grid;
     justify-content: center;
 }
@@ -1704,4 +1699,48 @@ button img{
 }
 #modal-flujo .modal-body{
     padding: 0px 10px;
+}
+/* __________________________________________________________________________________________ */
+.header-modal-flujo div{
+    font-weight: lighter;
+    font-size: 16px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+/* __________________________________________________________________________________________ */
+#modal-visit .contact-visit .contact-info span select{
+	display: inline-block;
+	width: 34%;
+	cursor: pointer;
+  	padding: 2px 10px;
+  	height: 25px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #ffffff;
+	color: #3f3f3f;
+	font-size: 1em;
+	color: #4d4d4d;
+	border:1px solid #00000049;
+    border-radius: 3px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+.btn-boleta .boleta{
+    background-color: #ffffff;
+    border: 1px solid #00000049;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    color: #F26922;
+    font-size: 15px;
+}
+.btn-boleta .boleta:hover{
+    background-color: #009DC3;
+    color: #fff;
+    transition: all ease 0.2s;
 }

@@ -303,3 +303,17 @@ a{
     transition: all ease 0.5s;
 }
 
+ h2 img{
+    height: 20px;
+    margin-left: 10px;
+  }
+ h2{
+    display: flex;
+    align-items: center;
+  }
+  #d-act-btn-au{
+    display: none;
+  }
+  img{
+    cursor: pointer;
+  }
