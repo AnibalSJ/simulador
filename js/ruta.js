@@ -44,6 +44,9 @@ aceptar.addEventListener('click', () => {
                 portal.style.display = 'none';
             });
     })
+    document.getElementById('img-act-ruta').style.display = 'none';
+    document.getElementById('d-act-btn-au').style.display = 'block';
+
 });
 ir_portal.addEventListener('click', () => {
     const portal_ins = document.getElementById('portal_ins');
@@ -106,7 +109,7 @@ portal_inicio.addEventListener('click', ()=>{
     estado.textContent = "Completado";
     actividad.style.display = 'none';
     portal_inicio.style.display = 'none';
-
+    document.getElementById('img-detalle-audio').style.display = "block";
 });
 
 volver_dash.addEventListener('click', ()=>{
@@ -127,3 +130,21 @@ ir_aprovisionamiento.addEventListener('click', ()=>{
     aprovisionamiento.style.display = 'block';
     cerrado.style.display = 'none'
 });
+let audioR = false;
+function alertAudio(idAudio){
+    idAudio = document.getElementById(idAudio);
+    console.log(idAudio)
+    if(!audioR){
+        // alert('repro audio');
+        idAudio.play();
+        idAudio.currentTime = 0;
+        idAudioRepro = idAudio;
+        audioR = !audioR;
+    }else{
+        // alert('pausar audio')
+        idAudioRepro.pause();
+        idAudioRepro.currentTime = 0;
+        idAudioRepro = idAudio;
+        idAudio.play()
+    }
+}

@@ -114,7 +114,10 @@ document.getElementById('agregar-in').addEventListener('click', event =>{
             document.getElementById(`cantidad-${contadorRegistros}`).addEventListener('change', event=>{
                 element.cantidad = document.getElementById(`cantidad-${contadorRegistros-1}`).value;
                 estadoGuardado = false;
+                element.cantidad = Math.abs(element.cantidad);
+                document.getElementById(`material-a-${contadorRegistros-1}`).innerHTML = element.cantidadAsignada - element.cantidad;
             })
+            
             document.getElementById(`material-a-${contadorRegistros}`).addEventListener('change', event=>{
                 element.cantidadAsignada = document.getElementById(`material-a-${contadorRegistros-1}`).value;
                 estadoGuardado = false;
@@ -151,6 +154,8 @@ inventario.forEach(element=>{
     document.getElementById(`cantidad-${element.id}`).addEventListener('change', event=>{
         element.cantidad = document.getElementById(`cantidad-${element.id}`).value;
         estadoGuardado = false;
+        element.cantidad = Math.abs(element.cantidad);
+        document.getElementById(`material-a-${element.id}`).innerHTML = element.cantidadAsignada - element.cantidad;
     })
     document.getElementById(`material-a-${element.id}`).addEventListener('change', event=>{
         element.cantidadAsignada = document.getElementById(`material-a-${element.id}`).value;

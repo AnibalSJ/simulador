@@ -318,21 +318,17 @@ document.getElementById('btninfoSva').addEventListener('click', event =>{
             let select = document.createElement("select");
             select.setAttribute("id", "select-wp");
             let optionUno  = document.createElement("option")
-            optionUno.value = "AP - 1";
-            optionUno.text = "AP - 12";
+            optionUno.value = "D41FED078809554A0";
+            optionUno.text = "D41FED078809554A0";
             select.appendChild(optionUno)
             let optionDos  = document.createElement("option");
-            optionDos.value = "AP - 1";
-            optionDos.text = "AP - 12";
+            optionDos.value = "1A84EF8E4A43A48C0";
+            optionDos.text = "1A84EF8E4A43A48C0";
             select.appendChild(optionDos)
             let optionTres  = document.createElement("option")
-            optionTres.value = "AP - 1";
-            optionTres.text = "AP - 12";
+            optionTres.value = "294D3F8E4A43C3DB0";
+            optionTres.text = "294D3F8E4A43C3DB0";
             select.appendChild(optionTres)
-            let optionCuatro  = document.createElement("option")
-            optionCuatro.value = "AP - 1";
-            optionCuatro.text = "AP - 12";
-            select.appendChild(optionCuatro)
             let cross = document.createElement('div');
             let crossIco = document.createElement('i');
             cross.className = "croos-sva";

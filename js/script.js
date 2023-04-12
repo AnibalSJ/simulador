@@ -9,6 +9,7 @@ const btn_visita = document.getElementById('btn-visita');
 const modal_visit = document.getElementById('modal-visit');
 const modal_confirm = document.getElementById('modal-confirm');
 const modal_punto_activar = document.getElementById('modal-punto-activar');
+
 document.getElementById('btn-paso-2').addEventListener('click', ()=>{
     //Mostrar la sección 2 y ocultar la sección 1
     $( document ).ready(function() {
@@ -23,6 +24,7 @@ document.getElementById('btn-paso-2').addEventListener('click', ()=>{
             document.getElementById('pasoli-1').classList.remove("active");
             document.getElementById('pasoli-1').className = "done";
             document.getElementById('pasoli-2').className = "active";
+            $('#modal-ont-ptwo').modal('toggle')
         });
       }, "4000");
     
@@ -225,66 +227,116 @@ btn_visita.addEventListener('click', () =>{
 let codigo = document.getElementById('codigo');
 let btn_confirm = document.getElementById('btn-confirm');
 let btn_sms = document.getElementById('btn-sms');
-btn_sms.addEventListener("click", ()=>{
-    let timerInterval;
-    Swal.fire({
-        title: 'INFORMACIÓN',
-        timer: 5000,
-        timerProgressBar: true,
-        didOpen: () => {
-            Swal.showLoading()  
-        },
-        willClose: () => {
-            clearInterval(timerInterval)
-        }
-    }).then(() => {
-        btn_sms.disabled = true;
-        codigo.style.display = 'block';
-        btn_confirm.style.display = 'block';
-        btn_confirm.addEventListener("click", ()=>{
-            let btn_actualizar = document.getElementById('btn-actualizar');
+let nombre_contact = 0;
+let apellido_contact = 0;
+let celular_contact = 0;
+
+btn_sms.addEventListener("click", (event)=>{
+    nombre_contact = document.getElementById('nombre-contact').value;
+    apellido_contact = document.getElementById('apellido-contact').value;
+    celular_contact = document.getElementById('celular-contact').value;
+    document.getElementById('cliente').value = `${nombre_contact} ${apellido_contact}`;
+
+    if(celular_contact.length == 10){
+        let array = celular_contact[0];
+        if (array == 3){
+            let timerInterval;
             Swal.fire({
                 title: 'INFORMACIÓN',
-                text: 'El código es correcto',
-            }).then(() =>{
-                btn_sms.style.display = 'none';
-                btn_confirm.style.display = 'none';
-                btn_actualizar.style.display = 'block'
-
-                btn_actualizar.addEventListener("click", ()=>{
-                    btn_paso_5 = document.getElementById('btn-paso-5');
+                timer: 5000,
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()  
+                },
+                willClose: () => {
+                    clearInterval(timerInterval)
+                }
+            }).then(() => {
+                btn_sms.disabled = true;
+                codigo.style.display = 'block';
+                btn_confirm.style.display = 'block';
+                btn_confirm.addEventListener("click", ()=>{
+                    let btn_actualizar = document.getElementById('btn-actualizar');
                     Swal.fire({
                         title: 'INFORMACIÓN',
-                        text: 'Proceso ejecutado exitosamente',
+                        text: 'El código es correcto',
                     }).then(() =>{
-                        paso_4_after.style.display = 'block';
-                        modal_visit.style.display = 'none';
-                        btn_paso_5.addEventListener("click", ()=>{
-
-                            $( document ).ready(function() {
-                                $('#modal-loading').modal('toggle')
-                            });
-                            setTimeout(() => {
-                                $( document ).ready(function() {
-                                    $('#modal-loading').modal('hide')
-                                    paso_5.style.display = 'block';
-                                    paso_4_after.style.display = 'none';
-                                    
-                                    document.getElementById('pasoli-4').classList.remove("active");
-                                    document.getElementById('pasoli-4').className = "done";
-                                    document.getElementById('pasoli-5').className = "active";
-                                });
-                              }, "3000");
-
+                        btn_sms.style.display = 'none';
+                        btn_confirm.style.display = 'none';
+                        btn_actualizar.style.display = 'block'
+        
+                        btn_actualizar.addEventListener("click", ()=>{
+                            btn_paso_5 = document.getElementById('btn-paso-5');
+                            Swal.fire({
+                                title: 'INFORMACIÓN',
+                                text: 'Proceso ejecutado exitosamente',
+                            }).then(() =>{
+                                paso_4_after.style.display = 'block';
+                                modal_visit.style.display = 'none';
+                                btn_paso_5.addEventListener("click", ()=>{
+        
+                                    $( document ).ready(function() {
+                                        $('#modal-loading').modal('toggle')
+                                    });
+                                    setTimeout(() => {
+                                        $( document ).ready(function() {
+                                            $('#modal-loading').modal('hide')
+                                            paso_5.style.display = 'block';
+                                            paso_4_after.style.display = 'none';
+                                            
+                                            document.getElementById('pasoli-4').classList.remove("active");
+                                            document.getElementById('pasoli-4').className = "done";
+                                            document.getElementById('pasoli-5').className = "active";
+                                        });
+                                      }, "3000");
+        
+                                })
+                            })
                         })
                     })
-                })
-            })
+                });
+            });
+        }else{
+            event.preventDefault();
+
+            Swal.fire({
+                title: 'No se identifica como número de celular',
+                icon: 'warning',
+                Text: 'Por favor ingrese un número celular que comience por 3'
+            });
+        }
+
+    }else{
+        event.preventDefault();
+
+        Swal.fire({
+            title: 'Número de celular muy corto',
+            icon: 'warning',
+            Text: 'Por favor ingrese un número celular de 10 dígitos'
         });
-    });
+    }
+
     
     
 });
+
+function validarNumero (){
+    let array = celular_contact[0];
+
+    if (array != 3){
+        Swal.fire({
+            title: 'MAl',
+            icon: 'warning'
+
+        });
+    }else{
+        Swal.fire({
+            title: 'Si',
+            icon: 'success'
+
+        });
+    }
+}; 
 
 document.getElementById('btn-con-acep').addEventListener('click', ()=>{
     //Mostrar la sección 6 y ocultar la sección 5
@@ -337,7 +389,7 @@ btn_con_s.addEventListener("click", ()=>{
         title: 'INFORMACIÓN',
         color:'#1285B6',
         html: 
-            '<p>Se encuentra realizando una validación del servicio con el cliente, por favor espere 1 minuto. La encuesta se envió al Correo: nicogo@etb.com.co. Número Celular: 3108576458</p><br>' +
+            '<p>Se encuentra realizando una validación del servicio con el cliente, por favor espere 1 minuto. La encuesta se envió al Correo: nicogo@etb.com.co.</p><br>' +
             '0 Dia, 0 hora, 0 minuto, <strong></strong> segundos<br>',
         timer: 5000,
         didOpen: () =>{
@@ -404,3 +456,27 @@ function modalRed(){
         $('#modal-red').modal('toggle')
     });
 }
+
+let tipo_contacto = document.getElementById('tipo-contacto');
+tipo_contacto.addEventListener('change', () =>{
+
+    let nombre_contact = document.getElementById('nombre-contact');
+    let apellido_contact = document.getElementById('apellido-contact');
+    let celular_contact = document.getElementById('celular-contact');
+
+    if(tipo_contacto.value == 'otro'){
+        nombre_contact.disabled = false;
+        apellido_contact.disabled = false;
+        celular_contact.disabled = false;
+    }else{
+        nombre_contact.disabled = true;
+        apellido_contact.disabled = true;
+        celular_contact.disabled = true;
+        
+        nombre_contact.value = 'NICOL';
+        apellido_contact.value = 'PINEDA MUÑOZ';
+    }
+    
+    
+    
+})

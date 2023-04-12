@@ -90,23 +90,6 @@ function alertAudio(idAudio){
         idAudio.play()
     }
 }
-function alerterroraudio(idAudio){
-    idAudio = document.getElementById(idAudio);
-    console.log(idAudio)
-    if(!audioR){
-        // alert('repro audio');
-        idAudio.play();
-        // idAudio.currentTime = 0;
-        idAudioRepro = idAudio;
-        audioR = !audioR;
-    }else{
-        // alert('pausar audio')
-        idAudioRepro.pause();
-        // idAudioRepro.currentTime = 0;
-        idAudioRepro = idAudio;
-        idAudio.play()
-    }
-}
 function bundlle(){
     if(!estadoBundle){
         document.querySelector('.service-in').classList.add('service-two');
