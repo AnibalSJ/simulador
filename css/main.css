@@ -166,3 +166,6 @@ a{
     width: 100%;
     text-align: center;
 }
+#con-info-access, #btn-flujo{
+    display: none;
+}
