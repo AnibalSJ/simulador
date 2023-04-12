@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/pasos.css">
     <link rel="shortcut icon" href="./assets/img/ETB.png" />
-    <title>Aprovisionamiento</title>
+    <title>Portal Instalación</title>
 </head>
 <body>
     <script>
@@ -254,7 +254,7 @@
               </div>
 
               <!-- paso 4 -->
-                         <div class="paso" id="paso-4">
+              <div class="paso" id="paso-4">
                 <div class="con-serv-paso-4">
                     <table>
                         <thead>
@@ -499,7 +499,6 @@
                         <br><br>
                     </div>
                     <div class="con-action-paso-1">
-                        <div class="ac-p-1" id="ac-p-1-al"><img src="./assets/img/interrogatorio.svg" alt=""></div>
                         <div class="ac-p-1"><i class="fa-solid fa-arrows-rotate"></i></div>
                         <div class="ac-p-1"><p>Ping</p></div>
                         <div class="ac-p-1" onclick="modalRed()"><i class="fa-solid fa-wifi"></i></div>
@@ -605,36 +604,21 @@
               <!-- paso 7 -->
               <div class="paso" id="paso-7">
                 <div class="btn-boleta">
-                    <button class="boleta" id="cliente">NICOL PINEDA MUÑOZ <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-usuarios-bole')"></button>
+                    <input type="button" value="NICOL PINEDA MUÑOZ" class="boleta" id="cliente"> <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-usuarios-bole')" style="width: 20px;">
                     <audio id="au-usuarios-bole" controls class="audio" style="display: none;">
                         <source type="audio/wav" src="./assets/audio/Paso 7/Usuarios para boleta digital.m4a">
                     </audio>
-                    <button class="boleta">Contacto</button>
-                    <button class="boleta">Otro</button>
-                    <button class="boleta">Escanear boleta digital</button>
+                    <input type="button" value="contact-info" class="boleta">
+                    <input type="button" value="Otro" class="boleta">
+                    <input type="button" value="Escanear boleta digital" class="boleta">
+                    
                 </div>
 
                 <div id="formato-boleta" style="display: none;">
-                    <!-- <div class="contact">
-                        <div class="item-acce">
-                            <p class="cabecera">Contactos autorizados</p>
-                            <div class="btn-contact">
-                                <div id="update-contact" style="display: none;"><button class="update-contact">Editar Contacto</button></div>
-                                <button class="contact">PQR Sin</button>
-                                <button class="contact">SINLISIM LUNA</button>
-                                <button class="contact">GONZALO TEST</button>
-                                <button class="contact">PQR Sin</button>
-                                <button class="contact">Jessika Linares</button>
-                                <button class="contact" id="contact">DORA GAMBA</button>
-
-                                <div class="contact-line"></div>
-                            </div>
-                        </div>
-                    </div> -->
 
                     <div class="formato-boleta">
                         <div class="item-acce">
-                            <p class="cabecera">Punto Cableado  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-punto-cableado-p7')"></p>
+                            <p class="cabecera">Punto Cableado  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-punto-cableado-p7')" ></p>
                             <audio id="au-punto-cableado-p7" controls class="audio" style="display: none;">
                                 <source type="audio/wav" src="./assets/audio/Paso 7/Punto cableado.m4a">
                             </audio>
@@ -794,7 +778,7 @@
                                     <tr>
                                         <th>¿Cuál?</th>
                                         <th>Tipo Conexión</th>
-                                        <th>Banada de conexión</th>
+                                        <th>Banda de conexión</th>
                                         <th>Configuro</th>
                                         <th>Espacio</th>
                                         <th>Piso Ubicación</th>
@@ -966,7 +950,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header" id="btn-close-flujo">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Flujo</h1>
+              <h1 class="modal-title fs-5 header-modal-flujo" id="staticBackdropLabel">Flujo <div><i class="fa-regular fa-hand-pointer" style="color: #ffffff;"></i> Click para cerrar</d></h1>
             </div>
             <div class="modal-body">
               <iframe src="https://etb.my.salesforce-sites.com/DIGITAL" frameborder="0" id="recomendador"></iframe>
@@ -1274,49 +1258,51 @@
   </div>
 </div>
 <div class="modal" tabindex="-1" id="modal-visit">
-  <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-          <div class="modal-header">
-          <h5 class="modal-title">CONTACTO VISITA <label for="">  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-contacto-ps4')"></label></h5>
-          <audio id="au-contacto-ps4" controls class="audio" style="display: none;">
-            <source type="audio/wav" src="./assets/audio/Paso 4/64335e3c7d53b6.31250887.m4a">
-        </audio>
-          </div>
-          <div class="contact-visit">
-              <p class="cabecera-info">Contacto visita</p>
-              <div class="contact-info">
-                  <label for=""> Quien recibe la visita</label>
-                  <span><input type="text" name="" id="" value="Titular"></span>
-
-                  <label for="">Tipo Documento</label>
-                  <span><input type="text" name="" id="" value="CC" disabled></span>
-
-                  <label for="">Nombres</label>
-                  <span><input type="text" name="" id="" value="NICOL"></span>
-  
-                  <label for="">Apellidos</label>
-                  <span><input type="text" name="" id="" value="PINEDA MUÑOZ"></span>
-  
-                  <label for="">Celular</label>
-                  <span><input type="text" name="" id="" value="3108576458"></span>
-                  
-                  <div id="codigo" style="display: none;">
-                      <label for="">Código SMS</label>
-                      <span><input type="text" name="" value="N9OVVI" disabled></span>
-                  </div>
-              </div>
-          </div>
-          <div class="modal-footer">
-              <button type="button" class="btn btn-primary" id="btn-sms">ENVIAR SMS</button>
-              <button type="button" class="btn btn-primary" id="btn-confirm" style="display: none;">CONFIRMAR CELULAR</button>
-              <button type="button" class="btn btn-primary" id="btn-actualizar" style="display: none;">ACTUALIZAR DATOS</button>
-          </div>
-      </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">CONTACTO VISITA <label for="">  <img src="./assets/img/interrogatorio.svg" alt="" onclick="alertAudio('au-contacto-ps4')"></label></h5>
+            <audio id="au-contacto-ps4" controls class="audio" style="display: none;">
+              <source type="audio/wav" src="./assets/audio/Paso 4/64335e3c7d53b6.31250887.m4a">
+          </audio>
+            </div>
+            <div class="contact-visit">
+                <p class="cabecera-info">Contacto visita</p>
+                <div class="contact-info">
+                    <label for=""> Quien recibe la visita</label>
+                    <span><select name="" id="tipo-contacto">
+                      <option value="titular">Titular</option>
+                      <option value="otro">Otro</option>
+                    </select></span>
+                      <label for="">Tipo Documento</label>
+                      <span><input type="text" name="" id="" value="CC" disabled></span>
+      
+                      <label for="">Nombres</label>
+                      <span><input type="text" name="" id="nombre-contact" value="NICOL" disabled></span>
+        
+                      <label for="">Apellidos</label>
+                      <span><input type="text" name="" id="apellido-contact" value="PINEDA MUÑOZ" disabled></span>
+        
+                      <label for="">Celular</label>
+                      <span><input type="number" name="" id="celular-contact" value="3108576458" disabled minlength="10" maxlength="10"></span>
+                    
+                    <div id="codigo" style="display: none;">
+                        <label for="">Código SMS</label>
+                        <span><input type="text" name="" value="N9OVVI" disabled></span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btn-sms">ENVIAR SMS</button>
+                <button type="button" class="btn btn-primary" id="btn-confirm" style="display: none;">CONFIRMAR CELULAR</button>
+                <button type="button" class="btn btn-primary" id="btn-actualizar" style="display: none;">ACTUALIZAR DATOS</button>
+            </div>
+        </div>
+    </div>
   </div>
-</div>
 
 <!-- Modal Activar -->
-<div class="modal" tabindex="-1" id="modal-punto-activar">
+<div class="modal modal-success-sim" tabindex="-1" id="modal-punto-activar">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -1333,7 +1319,7 @@
   </div>
 
 <!-- Modal boleta -->
-<div class="modal" tabindex="-1" id="modal-punto-exito-bole">
+<div class="modal modal-success-sim" tabindex="-1" id="modal-punto-exito-bole">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -1349,8 +1335,26 @@
     </div>
   </div>
 
+  <!-- Modal seleccionar ont -->
+  <div class="modal modal-success-sim" tabindex="-1" id="modal-ont-ptwo">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">SUCCESS </h5>
+        </div>
+        <div class="modal-body">
+          <p>502 - Las ONT single deben ser aprovisionadas con un AP, se debe adicionar el (WIFI PLUS TIPO 1)</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ACEPTAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal seleccionar ont -->
+
   <!-- Modal guardar boleta -->
-  <div class="modal" tabindex="-1" id="modal-punto-fail-bole">
+  <div class="modal modal-success-sim" tabindex="-1" id="modal-punto-fail-bole">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">

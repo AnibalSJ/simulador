@@ -42,7 +42,10 @@
                     <a href="#" class="btn-ruta" id="btn_ruta">Activar ruta</a>
                 </div>
                 <div class="item-bread">
-                    <img src="./assets/img/menu-puntos.svg" alt="">
+                    <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-activarRuta-ru')" id="img-act-ruta">
+                    <audio id="au-activarRuta-ru" controls class="audio" style="display: none;">
+                        <source type="audio/wav" src="./assets/audio/ruta/actuvar Ruta.m4a">
+                    </audio>
                 </div>
             </div>
             <div id="pendiente" class="body-dash-dash" style="display: none;">
@@ -61,8 +64,11 @@
                                 <span id="pen"></span>
                             </div>
                             <div class="con-text">
-                                <h2>Pendiente</h2>
+                                <h2>Pendiente <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-btn-iniciar')" id="d-act-btn-au"></h2>
                             </div>
+                            <audio id="au-btn-iniciar" controls class="audio" style="display: none;">
+                                <source type="audio/wav" src="./assets/audio/ruta/btnIniciarDia.m4a">
+                            </audio>
                         </div>
                         <div class="drown" id="drown-p">
                             <a href="#" class="item-drown" id="inicio_dia" >
@@ -97,7 +103,7 @@
                         <div class="drown" id="drown-p">
                             <a href="#" class="item-drown">
                                 <span class="color"></span>
-                                <p>AM1_1 MDM-FIBRA-000056658 FTTC Aprovisionamiento - Instalación / Modificación KR 8 20 28 AP 201<p>
+                                <p>AM1_1 MDM-FIBRA-011706262 FTTC Aprovisionamiento - Instalación / Modificación KR 8 20 28 AP 201<p>
                             </a>
                         </div>
                     </div>
@@ -140,13 +146,18 @@
                                 <span class="color"></span>
                             </div>
                             <div class="con-text">
-                                <h2>Pendiente</h2>
+                                <h2>Pendiente <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-orden-rea')"></h2>
                             </div>
-                        </div>
+                        </div>| 
+                                                            <audio id="au-orden-rea" controls class="audio" style="display: none;">
+                                        <source type="audio/wav" src="./assets/audio/ruta/ordenArealizar.m4a">
+                                    </audio>
                         <div class="drown" id="drown-p">
                             <a href="#" class="item-drown" id="ir_aprovisionamiento">
                                 <span class="color"></span>
-                                <p>AM-2 MDM-FIBRA-002279957 / Aprovisionamiento Cobre - Instalación / Modificación CL 10B 89A 94 Pl 2 DARIO BERMUDEZ</p>
+                                <p>AM-2 MDM-FIBRA-011706262 / Aprovisionamiento FTTH - Instalación / Modificación AK 9 113 52 LC 102 MARIA MARTINEZ                         
+                                    </p>
+
                             </a>
                             <a href="./orden.html" class="item-drown">
                                 <span class="color"></span>
@@ -202,6 +213,11 @@
             <div class="content-apro">
                 <div class="content-info">
                     <div class="p-apro">
+                        <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-detalle-act')" style="width: 20px;">
+                        <br>
+                        <audio id="au-detalle-act" controls class="audio" style="display: none;">
+                            <source type="audio/wav" src="./assets/audio/ruta/DetalleActividad.m4a">
+                        </audio>
                         <label for="">Inicio - Fin:</label>
                         <p>10:07 - 11:37</p>
                         <label for="">Duración:</label>
@@ -214,13 +230,14 @@
                 <div class="content-info">
                     <div class="p-apro">
                         <label for="">Nombre:</label>
-                        <p>DARIO BERMÚDEZ</p>
+                        <p>MARIA MARTINEZ </p>
                         <label for="">Tipo identificación Cliente:</label>
                         <p>CC</p>
                         <label for="">Identificación Cliente:</label>
-                        <p>79575690</p>
+                        <p>1022414994</p>
                         <label for="">Dirección:</label>
-                        <p>CL 10B 89A 94 Pl 2</p>
+                        <p>AK 9 113 52 LC 102
+                        </p>
                     </div>
                 </div>
             </div>   
@@ -244,6 +261,10 @@
        </div>
        <div class="container-confi">
             <div class="inicio-dia">
+                <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-info-dia')" style="height: 20px;">
+                <audio id="au-info-dia" controls class="audio" style="display: none;">
+                    <source type="audio/wav" src="./assets/audio/ruta/InfoIniciardia.m4a">
+                </audio>
                 <label for="">Tipo orden: </label><span>Inicio de día</span>
                 <label for="">Intervalo de Tiempo: </label><span>Inicio Día</span>
                 <label for="">Inicio - Fin: </label><span>10:01 - 10:06</span>
@@ -274,6 +295,10 @@
          <div class="body-dash" id="seccion1">
              <div class="header-dash">
              </div>
+             <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-detalle-inicio')" style="height: 20px; margin-left: 20px;">
+             <audio id="au-detalle-inicio" controls class="audio" style="display: none;">
+                 <source type="audio/wav" src="./assets/audio/ruta/detalleIniciarDia.m4a">
+             </audio>
              <div class="con-cards-portal">
                  <div class="card">
                      <p class="cabecera">Datos Cliente</p>
@@ -354,7 +379,10 @@
  
          <div class="body-dash" id="seccion2" style="display: none;">
              <div class="header-dash">
-                 <h2>Detalle Orden <span>MDM-FIBRA-011706262</span></h2>
+                 <h2>Detalle Orden <span>MDM-FIBRA-011706262</span> <img src="./assets/img/interrogatorio.svg" alt="au-detalle-orden"  onclick="alertAudio('au-detalle-orden')" style="width: 20px; height: 20px; display: none;" id="img-detalle-audio"></h2>
+                 <audio id="au-detalle-orden" controls class="audio" style="display: none;">
+                    <source type="audio/wav" src="./assets/audio/ruta/Volver.m4a">
+                </audio>
              </div>
              <div class="con-cards-portal">
                  <div class="card">
@@ -427,10 +455,13 @@
                  </div>                
              </div>
              <div class="portal-comen" id="actividad">
-                 <label for="">Proximas Actividades</label> 
+                 <label for="">Proximas Actividades <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-prox-act')" style="width: 20px; margin-left: 10px;">
+                    <audio id="au-prox-act" controls class="audio" style="display: none;">
+                        <source type="audio/wav" src="./assets/audio/Paso 6/Proxima actividad.m4a">
+                    </audio></label> 
                  <select name="" id="actividad" required>
                      <option value="">Seleccione Orden</option>
-                     <option value="">MDM-FIBRA-000055613-KR 1D 29 30-Instalación</option>
+                     <option value="">MDM-FIBRA-011706262-KR 1D 29 30-Instalación</option>
                      <option value="">Orden_1067866-Almuerzo</option>
                  </select>
              </div>
