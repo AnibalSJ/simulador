@@ -269,11 +269,15 @@ a{
 /* ================================================= Fin inicio dia - Portal =================================================== */
 /* ================================================= Aprovisionamiento ================================= */
 .container-apro{
-    display: flex;
+    display: grid;
+    width: 100%;
     justify-content: center;
 }
 .content-apro{
     margin-top: 40px;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
 }
 .content-info{
     display: block;
@@ -282,7 +286,9 @@ a{
     padding: 30px;
     margin-bottom: 20px;
     box-shadow: 1px 1px 2px #00000049;
-    width: 600px;
+    width: 100%;
+    min-width: 300px;
+    max-width: 600px;
     line-height: 2;
     color: #828282;
 }
