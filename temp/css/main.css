@@ -1,0 +1,135 @@
+:root{
+    --orange-etb: #F36F31;
+    --blue-os-etb: #008AA6;
+}
+
+.img-audio{
+    width: 40px;
+    animation-name: animacionAudio;
+    animation-duration: 0.3s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+}
+.img-audio:hover{
+    transform: scale(1.1);
+}
+@keyframes animacionAudio {
+    0%{
+        rotate: 0deg;
+        transform: scale(1);
+    }
+    25%{
+        rotate: 5deg;
+        transform: scale(1.025);
+    }
+    50%{
+        rotate: 10deg;
+        transform: scale(1.05);
+    }
+    75%{
+        rotate: 5deg;
+        transform: scale(1.025);
+    }
+    100%{
+        rotate: 0deg;
+        transform: scale(1);
+    }
+}
+#no-audio-f{
+    animation: none;
+    cursor: auto;
+}
+#no-audio-f:hover{
+    transform: scale(1);
+}
+
+.container-genre{
+    width: 100vw;
+    min-width: 314px;
+}
+.con-info-audios{
+    background: var(--orange-etb);
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    column-gap: 10px;
+}
+.con-info-audios p{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-weight: 600;
+}
+.con-info-audios .con-img-au{
+    display: grid;
+    justify-content: center;
+}
+.header{
+    background: var(--blue-os-etb);
+    width: 100%;
+    height: 55px;
+    display: grid;
+    grid-template-columns: 1fr 40px 40px;
+    justify-content: center;
+    align-items: center;
+}
+.header .volver-header, .header .text-header-ac{
+    display: none;
+}
+.header-act {
+    grid-template-columns: 40px 1fr 40px 40px;
+}
+.header-act .volver-header, .header-act .text-header-ac{
+    display: block;
+}
+.header-act .text-header{
+    display: none;
+}
+
+.text-header, .text-header-ac{
+    color: white;
+    font-size: 17px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.text-header span{
+    font-size: 15px;
+}
+.header img{
+    height: 30px;
+}
+.actions-h{
+    width: 100%;
+    background: #F5F5F5;
+    height: 45px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 150px 80px 90px;
+    padding-left: 20px;
+    column-gap: 20px;
+    
+}
+.actions-h a{
+    color: #3890C3;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+}
+.actions-h img{
+    width: 35px;
+}
+#select-header{
+    border: none;
+    color: #3890C3;
+    font-weight: 550;
+    background: none;
+}
+#btn-actividad-h{
+    display: none;
+}
