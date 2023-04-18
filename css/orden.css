@@ -1,6 +1,3 @@
-body{
-    overflow-x: hidden;
-}
 .body-dash{
     border: 1PX solid #73879C;
     margin-top: 20px;
@@ -182,6 +179,7 @@ li span{
     .card:nth-child(6){
         height: 110px;
     }
+    
  
 }
 @media(min-width: 1200px){
@@ -224,4 +222,18 @@ li span{
 }
 .portal-comen select{
     width: 300px;
+} 
+
+
+@media (max-width: 800px){
+    .footer-dash{
+        display: block;
+        margin: 15px auto;
+        
+    }
+    .footer-dash a{
+        width: 100px;
+        margin-bottom: 12px;
+        padding: 5px;
+    }
 }

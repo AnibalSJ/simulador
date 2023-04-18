@@ -1,10 +1,7 @@
-let menu = document.querySelector('.info-u');
-let btnAccesos = document.querySelector('.con-btn-ac');
 let estadoMenu = false;
 let estadoC = true;
 let estadoACc = false;
 let estadoP = true;
-let audioR = false;
 let estadoBundle = false;
 let estadoAlertM =  false;
 let idAudioRepro = 0;
@@ -16,17 +13,35 @@ let conSva = document.getElementById('serv-paso-2');
 let canElim = 0;
 let posicion = 0;
 
-
-menu.addEventListener("click", event =>{
-    estadoMenu = !estadoMenu;
-    if(estadoMenu){
-        document.getElementById('menu-drown').style.display = 'grid';
-        menu.style.background = "#D9DEE4";
-    }else{
-        document.getElementById('menu-drown').style.display = 'none';
-        menu.style.background = "none";
+let audioR = false;
+function alertAudio(idAudio, idimg){
+    console.log('alert-info')
+    if(idAudio == 'au-login-inicio'){
+        document.getElementById('alert-info').style.display = 'flex';
     }
-})
+    idAudio = document.getElementById(idAudio);
+    console.log(idAudio)
+    if(!audioR){
+        // alert('repro audio');
+        idAudio.play();
+        idAudio.currentTime = 0;
+        idAudioRepro = idAudio;
+        audioR = !audioR;
+        cambioParlanteE(idimg)
+    }else{
+        // alert('pausar audio')
+        idAudioRepro.pause();
+        idAudioRepro.currentTime = 0;
+        idAudioRepro = idAudio;
+        idAudio.play()
+        cambioParlanteE(idimg)
+    }
+}
+function cambioParlanteE(idimg){
+    document.getElementById(idimg).src = "./assets/img/Group 11.svg";
+    document.getElementById(idimg).style.animation = 'none';
+}
+
 function drownAct(parametro){
     if(parametro == 1){
         if(estadoC == false){
@@ -73,23 +88,6 @@ function drownAct(parametro){
 //         estadoAlertM = !estadoAlertM;
 //     }
 // }
-function alertAudio(idAudio){
-    idAudio = document.getElementById(idAudio);
-    console.log(idAudio)
-    if(!audioR){
-        // alert('repro audio');
-        idAudio.play();
-        idAudio.currentTime = 0;
-        idAudioRepro = idAudio;
-        audioR = !audioR;
-    }else{
-        // alert('pausar audio')
-        idAudioRepro.pause();
-        idAudioRepro.currentTime = 0;
-        idAudioRepro = idAudio;
-        idAudio.play()
-    }
-}
 function bundlle(){
     if(!estadoBundle){
         document.querySelector('.service-in').classList.add('service-two');
@@ -115,20 +113,20 @@ function bundlle(){
         
 //     }
 // }
-btnAccesos.addEventListener('click', event=>{
-    if(!estadoACc){
-                btnAccesos.style.width = "100%";
-                document.getElementById('con-info-access').style.top = "calc(100vh - 360px)";
-                document.getElementById('con-info-access').style.height = "320px";
-                estadoACc = !estadoACc;
-            }else{
-                btnAccesos.style.width = "140px";
-                document.getElementById('con-info-access').style.top = "calc(100vh - 40px)";
-                document.getElementById('con-info-access').style.height = "auto";
-                estadoACc = !estadoACc; 
+// btnAccesos.addEventListener('click', event=>{
+//     if(!estadoACc){
+//                 btnAccesos.style.width = "100%";
+//                 document.getElementById('con-info-access').style.top = "calc(100vh - 360px)";
+//                 document.getElementById('con-info-access').style.height = "320px";
+//                 estadoACc = !estadoACc;
+//             }else{
+//                 btnAccesos.style.width = "140px";
+//                 document.getElementById('con-info-access').style.top = "calc(100vh - 40px)";
+//                 document.getElementById('con-info-access').style.height = "auto";
+//                 estadoACc = !estadoACc; 
                 
-            }
-})
+//             }
+// })
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////////////////
@@ -512,14 +510,14 @@ document.getElementById('btn-modal-ps4error').addEventListener('click', event=>{
     });
 })
 // ___________________________________________________________________________________
-let estadoflujo = false;
-document.getElementById('btn-flujo').addEventListener('click', event =>{
-    $( document ).ready(function() {
-        $('#modal-flujo').modal('toggle')
-    });
-})
-document.getElementById('btn-close-flujo').addEventListener('click', event=>{
-    $( document ).ready(function() {
-        $('#modal-flujo').modal('hide')
-    });
-})
+// let estadoflujo = false;
+// document.getElementById('btn-flujo').addEventListener('click', event =>{
+//     $( document ).ready(function() {
+//         $('#modal-flujo').modal('toggle')
+//     });
+// })
+// document.getElementById('btn-close-flujo').addEventListener('click', event=>{
+//     $( document ).ready(function() {
+//         $('#modal-flujo').modal('hide')
+//     });
+// })

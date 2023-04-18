@@ -1,4 +1,3 @@
-
 function modalUbi(){
     $( document ).ready(function() {
         $('#modal-ubi').modal('toggle')

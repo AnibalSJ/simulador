@@ -1,22 +1,4 @@
-let audioR = false;
 let estadoInputs = false;
-function alertAudio(idAudio){
-    idAudio = document.getElementById(idAudio);
-    console.log(idAudio)
-    if(!audioR){
-        // alert('repro audio');
-        idAudio.play();
-        idAudio.currentTime = 0;
-        idAudioRepro = idAudio;
-        audioR = !audioR;
-    }else{
-        // alert('pausar audio')
-        idAudioRepro.pause();
-        idAudioRepro.currentTime = 0;
-        idAudioRepro = idAudio;
-        idAudio.play()
-    }
-}
 function verificarUser(){
     if(document.getElementById('username').value == "escueladigital"){
         if(document.getElementById('password').value == "digital"){

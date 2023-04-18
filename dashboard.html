@@ -1,481 +1,367 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Instalación</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/be71717483.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/orden.css">
     <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="shortcut icon" href="./assets/img/ETB.png" />
-
+    <link rel="shortcut icon" href="./assets/img/ETB.png">
 </head>
 <body>
-    <div class="container-portal" id="portal">
-        <div class="info">
-            <div class="con-ico"><img src="./assets/img/interrogatorio.svg" alt=""></div>
-            <div class="con-text-info">Dando click en este icono, puede saber más información.</div>
+    <script>
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+    </script>
+    <div class="container-genre container-dashb">
+        <div class="con-info-audios">
+            <div class="con-img-au">
+                <img src="./assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="no-audio-f">
+            </div>
+            <div class="info-audios">
+                <p>Nota: Hacer touch sobre estos iconos para más información</p>
+            </div>
         </div>
-       <div class="header">
-            <div class="menu">
-                <img src="./assets/img/menu-hamburguesa.svg" alt="">
-            </div>
-            <div class="con-info-u">
-                <div class="info-u">
-                    <img src="./assets/img/user.png" alt="">
-                    <p>Escuela Digital</p>
-                </div>
-            </div>
-            <div class="menu-drown" id="menu-drown">
-                <a href="#">Cambiar contraseña</a>
-                <a href="./login.html">Salir</a>
-            </div>
-       </div>
-       <div class="body-portal body-info-eta">
-            <div class="breadcump breadcump-dhb" style="margin-bottom: 60px;">
-                <div class="item-bread">Lista de actividades</div>
-                <div class="item-bread">
-                    <a href="#" class="btn-ruta" id="btn_ruta">Activar ruta</a>
-                </div>
-                <div class="item-bread">
-                    <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-activarRuta-ru')" id="img-act-ruta">
-                    <audio id="au-activarRuta-ru" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/ruta/actuvar Ruta.m4a">
-                    </audio>
-                </div>
-            </div>
-            <div id="pendiente" class="body-dash-dash" style="display: none;">
-                <div class="card-act-p card-act">
-                    <div class="alert-t alert">
-                    <div class="alert-info" id="alert-info-acP">
-                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
-                    </div>
-                    </div>
-                    <div class="card-a">
-                        <div class="header-card">
-                            <div class="ico-drown">
-                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(2)">
-                            </div>
-                            <div class="con-drown">
-                                <span id="pen"></span>
-                            </div>
-                            <div class="con-text">
-                                <h2>Pendiente <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-btn-iniciar')" id="d-act-btn-au"></h2>
-                            </div>
-                            <audio id="au-btn-iniciar" controls class="audio" style="display: none;">
-                                <source type="audio/wav" src="./assets/audio/ruta/btnIniciarDia.m4a">
-                            </audio>
-                        </div>
-                        <div class="drown" id="drown-p">
-                            <a href="#" class="item-drown" id="inicio_dia" >
-                                <span class="color color2"></span>
-                                <p>Inicio de día</p>
-                            </a>
-                            <a href="#" class="item-drown">
-                                <span class="color"></span>
-                                <p>Almuerzo</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-act-p card-act">
-                    <div class="alert-t alert">
-                    <div class="alert-info" id="alert-info-acP">
-                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
-                    </div>
-                    </div>
-                    <div class="card-a">
-                        <div class="header-card">
-                            <div class="ico-drown">
-                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(2)">
-                            </div>
-                            <div class="con-drown">
-                                <span id="pen"></span>
-                            </div>
-                            <div class="con-text">
-                                <h2>No programado</h2>
-                            </div>
-                        </div>
-                        <div class="drown" id="drown-p">
-                            <a href="#" class="item-drown">
-                                <span class="color"></span>
-                                <p>AM1_1 MDM-FIBRA-011706262 FTTC Aprovisionamiento - Instalación / Modificación KR 8 20 28 AP 201<p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================ Ruta =============================== -->
-            <div id="ruta" class="body-dash-dash" style="display: none;">
-                <div class="card-act-p card-act">
-                    <div class="alert-info" id="alert-info-acP">
-                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
-                    </div>
-                    </div>
-                    <div class="act-ruta">
-                        <div class="content-ruta">
-                            <div class="p-ruta">
-                                <p>¿Activar ruta ya?</p>
-                            </div>
-                            <div class="btn-ru">
-                                <button class="cancelar" id="cancelar">Cancelar</button>
-                                <button class="aceptar" id="aceptar">OK</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- ============================= Fin ruta =======================-->
-            <div id="cerrado" class="body-dash-dash" style="display: none;">
-                <div class="card-act-p card-act">
-                    <div class="alert">
-                    <div class="alert-info" id="alert-info-ac-co">
-                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
-                    </div>
-                    </div>
-                    <div class="card-a">
-                        <div class="header-card">
-                            <div class="ico-drown">
-                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(1)">
-                            </div>
-                            <div class="con-drown">
-                                <span class="color"></span>
-                            </div>
-                            <div class="con-text">
-                                <h2>Pendiente <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-orden-rea')"></h2>
-                            </div>
-                        </div>| 
-                                                            <audio id="au-orden-rea" controls class="audio" style="display: none;">
-                                        <source type="audio/wav" src="./assets/audio/ruta/ordenArealizar.m4a">
-                                    </audio>
-                        <div class="drown" id="drown-p">
-                            <a href="#" class="item-drown" id="ir_aprovisionamiento">
-                                <span class="color"></span>
-                                <p>AM-2 MDM-FIBRA-011706262 / Aprovisionamiento FTTH - Instalación / Modificación AK 9 113 52 LC 102 MARIA MARTINEZ                         
-                                    </p>
-
-                            </a>
-                            <a href="./orden.html" class="item-drown">
-                                <span class="color"></span>
-                                <p>Almuerzo</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-act-p card-act">
-                    <div class="alert-t alert">
-                    <div class="alert-info" id="alert-info-acP">
-                        <p>Ingresar el usuario asignado y la contraseña correspondiente</p>
-                    </div>
-                    </div>
-                    <div class="card-a">
-                        <div class="header-card">
-                            <div class="ico-drown">
-                                <img src="./assets/img/angulo-hacia-abajo.svg" alt="" onclick="drownAct(2)">
-                            </div>
-                            <div class="con-drown">
-                                <span id="pen2"></span>
-                            </div>
-                            <div class="con-text">
-                                <h2>Cerrado</h2>
-                            </div>
-                        </div>
-                        <div class="drown" id="drown-p">
-                            <a href="#" class="item-drown">
-                                <span class="color"></span>
-                                <p>Inicio Día - Turnos Inicio 7AM Inicio Día</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-       </div>
-    </div>
-    <!-- ====================== Aprovisionamiento ================================== -->
-    <div class="container-inicio" id="aprovisionamiento" style="display: none;">
-        <div class="header-confi">
-            <div class="menu-ini">
-                <ul>
-                    <li><a><i class="fa-solid fa-chevron-left"></i> Inicio</a></li>
-                </ul>
-            </div>
-            <div class="menu-drown" id="menu-drown">
-                <a href="#">Cambiar contraseña</a>
-                <a href="./login.html">Salir</a>
-            </div>
-       </div>
-       <div class="container-apro">
-            <div class="content-apro">
-                <div class="content-info">
-                    <div class="p-apro">
-                        <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-detalle-act')" style="width: 20px;">
-                        <br>
-                        <audio id="au-detalle-act" controls class="audio" style="display: none;">
-                            <source type="audio/wav" src="./assets/audio/ruta/DetalleActividad.m4a">
-                        </audio>
-                        <label for="">Inicio - Fin:</label>
-                        <p>10:07 - 11:37</p>
-                        <label for="">Duración:</label>
-                        <p>1 Hora 30 min</p>
-                    </div>
-                    <div class="btn-apro">
-                        <a href="./orden.html" class="detalle" id="detalle_comp">Aprovisionamiento</a>
-                    </div>
-                </div>
-                <div class="content-info">
-                    <div class="p-apro">
-                        <label for="">Nombre:</label>
-                        <p>MARIA MARTINEZ </p>
-                        <label for="">Tipo identificación Cliente:</label>
-                        <p>CC</p>
-                        <label for="">Identificación Cliente:</label>
-                        <p>1022414994</p>
-                        <label for="">Dirección:</label>
-                        <p>AK 9 113 52 LC 102
-                        </p>
-                    </div>
-                </div>
-            </div>   
-        </div>
-    </div>
-    <!-- ====================== Fin Aprovisionamiento ================================== -->
-
-    <!-- ===================== Ir a portal instalacion =============================== -->
-    <div class="container-inicio" id="inicio" style="display: none;">
-        <div class="header-confi">
-            <div class="menu-ini">
-                <ul>
-                    <li><a id="atras"><i class="fa-solid fa-chevron-left"></i> Inicio</a></li>
-                    <li class="detalle"><a>Detalle de actividad (31/03/2023)</a></li>
-                </ul>
-            </div>
-            <div class="menu-drown" id="menu-drown">
-                <a href="#">Cambiar contraseña</a>
-                <a href="./login.html">Salir</a>
-            </div>
-       </div>
-       <div class="container-confi">
-            <div class="inicio-dia">
-                <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-info-dia')" style="height: 20px;">
-                <audio id="au-info-dia" controls class="audio" style="display: none;">
-                    <source type="audio/wav" src="./assets/audio/ruta/InfoIniciardia.m4a">
-                </audio>
-                <label for="">Tipo orden: </label><span>Inicio de día</span>
-                <label for="">Intervalo de Tiempo: </label><span>Inicio Día</span>
-                <label for="">Inicio - Fin: </label><span>10:01 - 10:06</span>
-                <label for="">Duración: </label><span>5 min</span>
-                <a href="#" class="btn-ini-dia" id="ir_portal">Portal</a>
-            </div>
-       </div>
-    </div>
-
-    <!-- ================================ Portal de instalacion =========================== -->
-    <div class="container-portal" id="portal_ins" style="display: none;">
         <div class="header">
-             <div class="menu">
-                 <img src="./assets/img/menu-hamburguesa.svg" alt="">
-             </div>
-             <div class="con-info-u">
-                 <div class="info-u">
-                     <img src="./assets/img/user.png" alt="">
-                     <p>Escuela Digital</p>
-                 </div>
-             </div>
-             <div class="menu-drown" id="menu-drown">
-                 <a href="#">Cambiar contraseña</a>
-                 <a href="./login.html">Salir</a>
-             </div>
+            <div class="volver-header"><img src="./assets/img/angle-left.svg" alt="volver-left"></div>
+            <div class="text-header">ETBQA_Tecnico1
+                <span><script>document.write(`${month}/${day}/${year}`)</script></span>
+            </div>
+            <div class="text-header-ac">Activar ruta de trabajo</div>
+            <img src="./assets/img/search.svg" alt="search">
+            <img src="./assets/img/comment-alt.svg" alt="msg">
         </div>
-        <div class="body-portal body-info-eta">
-         <div class="body-dash" id="seccion1">
-             <div class="header-dash">
-             </div>
-             <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-detalle-inicio')" style="height: 20px; margin-left: 20px;">
-             <audio id="au-detalle-inicio" controls class="audio" style="display: none;">
-                 <source type="audio/wav" src="./assets/audio/ruta/detalleIniciarDia.m4a">
-             </audio>
-             <div class="con-cards-portal">
-                 <div class="card">
-                     <p class="cabecera">Datos Cliente</p>
-                     <section class="left">
-                         <br>
-                         <p>Tipo Documento</p>
-                         <p>Número Documento</p>
-                         <p>Nombres</p>
-                         <p>Apellidos</p>
-                         <p>Telefono Fijo</p>
-                         <p>Celular</p>
-                         <p>Celular2</p>
-                         <p>Departamento</p>
-                         <p>Ciudad</p>
-                         <p>Dirección</p>
-                         <p>Estrato</p>
-                         <p>Email</p>
-                         <p>Tipo Cliente</p>
-                         <p>Segmento</p>
-                         <p>Segmento UEN</p>
-                         <p>UEN</p>
-                         <p>Categoria</p>
-                         <p>Recurrente</p>
-                         <br>
-                     </section>
-                     <section class="right">
-                         <br>
-                         <br><br>
-                         <br>
-                     </section>
-                 </div>
- 
- 
-                 <div class="card">
-                     <p class="cabecera">Producto Contratado</p>
-                     <section class="left">
-                         <br>
-                         <p>Producto</p>
-                         <p>Tecnologia</p>
-                         <p>Tipo de Orden</p>
-                         <p>Subtipo de Orden</p>
-                         <br>
-                     </section>
-                     <section class="right">
-                         <br>
-                         <p>Inicio de actividades</p>
-                         <br>
-                         <p>Inicio de actividades</p>
-                         <br>
-                         <br>
-                     </section>
-                 </div>
- 
-                 <div class="card">
-                     <p class="cabecera">Agendamiento</p>
-                     <section class="left">
-                         <br>
-                         <p>Fecha Agenda</p>
-                         <p>Franja</p>
-                         <p>Estado</p>
-                         <br>
-                     </section>
-                     <section class="right">
-                         <br>
-                         <p>3/23/2023</p>
-                         <p>IND</p>
-                         <p>Pendiente</p>
-                         <br>
-                     </section>
-                 </div>                
-             </div>
-             
-             <div class="footer-dash">
-                 <a href="#" id="volver">Volver</a>
-                 <a href="#" class="ac" id="portal_ini">Iniciar</a>
-             </div>
-         </div>
- 
-         <div class="body-dash" id="seccion2" style="display: none;">
-             <div class="header-dash">
-                 <h2>Detalle Orden <span>MDM-FIBRA-011706262</span> <img src="./assets/img/interrogatorio.svg" alt="au-detalle-orden"  onclick="alertAudio('au-detalle-orden')" style="width: 20px; height: 20px; display: none;" id="img-detalle-audio"></h2>
-                 <audio id="au-detalle-orden" controls class="audio" style="display: none;">
-                    <source type="audio/wav" src="./assets/audio/ruta/Volver.m4a">
-                </audio>
-             </div>
-             <div class="con-cards-portal">
-                 <div class="card">
-                     <p class="cabecera">Datos Cliente</p>
-                     <section class="left">
-                         <br>
-                         <p>Tipo Documento</p>
-                         <p>Número Documento</p>
-                         <p>Nombres</p>
-                         <p>Apellidos</p>
-                         <p>Telefono Fijo</p>
-                         <p>Celular</p>
-                         <p>Celular2</p>
-                         <p>Departamento</p>
-                         <p>Ciudad</p>
-                         <p>Dirección</p>
-                         <p>Estrato</p>
-                         <p>Email</p>
-                         <p>Tipo Cliente</p>
-                         <p>Segmento</p>
-                         <p>Segmento UEN</p>
-                         <p>UEN</p>
-                         <p>Categoria</p>
-                         <p>Recurrente</p>
-                         <br>
-                     </section>
-                     <section class="right">
-                         <br>
-                         <br><br>
-                         <br>
-                     </section>
-                 </div>
- 
-                 <div class="card">
-                     <p class="cabecera">Producto Contratado</p>
-                     <section class="left">
-                         <br>
-                         <p>Producto</p>
-                         <p>Tecnologia</p>
-                         <p>Tipo de Orden</p>
-                         <p>Subtipo de Orden</p>
-                         <br>
-                     </section>
-                     <section class="right">
-                         <br>
-                         <p>Inicio de actividades</p>
-                         <br>
-                         <p>Inicio de actividades</p>
-                         <br>
-                         <br>
-                     </section>
-                 </div>
- 
-                 <div class="card">
-                     <p class="cabecera">Agendamiento</p>
-                     <section class="left">
-                         <br>
-                         <p>Fecha Agenda</p>
-                         <p>Franja</p>
-                         <p>Estado</p>
-                         <br>
-                     </section>
-                     <section class="right">
-                         <br>
-                         <p>3/23/2023</p>
-                         <p>IND</p>
-                         <p id="estado">Iniciada</p>
-                         <br>
-                     </section>
-                 </div>                
-             </div>
-             <div class="portal-comen" id="actividad">
-                 <label for="">Proximas Actividades <img src="./assets/img/interrogatorio.svg" alt=""  onclick="alertAudio('au-prox-act')" style="width: 20px; margin-left: 10px;">
-                    <audio id="au-prox-act" controls class="audio" style="display: none;">
-                        <source type="audio/wav" src="./assets/audio/Paso 6/Proxima actividad.m4a">
-                    </audio></label> 
-                 <select name="" id="actividad" required>
-                     <option value="">Seleccione Orden</option>
-                     <option value="">MDM-FIBRA-011706262-KR 1D 29 30-Instalación</option>
-                     <option value="">Orden_1067866-Almuerzo</option>
-                 </select>
-             </div>
-             <div class="footer-dash">
-                 <a href="#" id="volver_dash">Volver</a>
-                 <a href="#" class="ac" id="portal_inicio">Completar</a>
-             </div>
-         </div>
-         <br><br>
+        <div class="actions-h">
+            <a href="#" id="btn-activar">Activar ruta</a>
+            <a href="#" id="btn-actividad-h">Agregar actividad</a>
+            <img src="./assets/img/Group 8.svg" alt="parlante-audio-etb" class="img-audio" id="img-activarRuta-ru" onclick="alertAudio('au-activarRuta-ru', 'img-activarRuta-ru')">
+            <select name="" id="select-header" disabled>
+                <option value="">Opciones</option>
+            </select>
+        </div>
+        <div class="con-estado-act">
+            <div class="estado">
+                <div class="header-estado">
+                    <div class="color-estado" style="background: #FFDC4A;">
+
+                    </div>
+                    <div class="con-ti-estado">
+                        <h3>Pendiente 
+                            <img src="./assets/img/Group 1.svg" alt="parlante-audio-etb" class="img-audio" id="img-iniciar-dia" onclick="alertAudio('au-iniciar-dia', 'img-iniciar-dia')" style="margin-left: 20px;">
+                            <img src="./assets/img/Group 14.svg" alt="parlante-audio-etb" class="img-audio" id="img-orden-rea" onclick="alertAudio('au-orden-rea', 'img-orden-rea')" style="margin-left: 20px; display: none;">
+                        </h3>
+                    </div>
+                    <div class="con-ico-estado">
+                        <img src="./assets/img/angle-up.svg" alt="">
+                    </div>
+                </div>
+                <div class="con-act" id="act-pe">
+                    <div class="actividad" id="inicio-dia-n">
+                        <div class="color-act" style="background: #FEA6A7;"></div>
+                        <div class="name-act">Inicio Día Inicio de Día
+                        </div>
+                    </div>
+                    <div class="actividad" style="display: none;" id="tarea">
+                        <div class="color-act" style="background: #FFCA97;"></div>
+                        <div class="name-act">AM_1 MDM-FIBRA-011706262 FTTC Aprovisionamiento - Instalación AK 9 113 52 LC 102</div>
+                    </div>
+                    <div class="actividad">
+                        <div class="color-act" style="background: #FFCA97;"></div>
+                        <div class="name-act">Almuerzo</div>
+                    </div>
+                </div>
+            </div>
+            <div class="estado" id="no-programado">
+                <div class="header-estado">
+                    <div class="color-estado" style="background: #FFDC4A;">
+
+                    </div>
+                    <div class="con-ti-estado">
+                        <h3>No Programado</h3>
+                    </div>
+                    <div class="con-ico-estado">
+                        <img src="./assets/img/angle-up.svg" alt="">
+                    </div>
+                </div>
+                <div class="con-act" id="act-pe">
+                    <div class="actividad">
+                        <div class="color-act" style="background: #FFCA97;"></div>
+                        <div class="name-act">AM_1 MDM-FIBRA-011706262 FTTC Aprovisionamiento - Instalación AK 9 113 52 LC 102</div>
+                    </div>
+                </div>
+            </div>
+            <div class="estado" id="terminado" style="display: none;">
+                <div class="header-estado">
+                    <div class="color-estado" style="background: var(--blue-os-etb);">
+
+                    </div>
+                    <div class="con-ti-estado">
+                        <h3>Cerrado</h3>
+                    </div>
+                    <div class="con-ico-estado">
+                        <img src="./assets/img/angle-up.svg" alt="">
+                    </div>
+                </div>
+                <div class="con-act" id="act-pe">
+                    <div class="actividad" id="inicio-dia-n">
+                        <div class="color-act" style="background: #25252569;"></div>
+                        <div class="name-act">Inicio Día Inicio de Día
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- confirmar ruta -->
+        <div class="con-ac-ruta" id="confi-ruta">
+            <div class="context-act">
+                ¿Activar ruta ya?
+            </div>
+            <div class="con-btn-ruta">
+                <button type="button" style="border: 1px solid #FAFAFA;" id="can-ruta">Cancelar</button>
+                <button type="button" class="btn-primary" id="ac-ruta">OK</button>
+            </div>
+        </div>
+        <!-- confirmar ruta -->
+        <!-- Info inicio de dia -->
+        <div class="con-info-inicio" id="con-info-inicio">
+            <div class="con-in-dia">
+                <img src="./assets/img/Group 10.svg" alt="parlante-audio-etb" class="img-audio" id="img-info-dia" onclick="alertAudio('au-info-dia', 'img-info-dia')">
+                <br>
+                <div class="items">
+                    <h5>Tipo de Orden</h5>
+                    <p>Inicio de Día</p>
+                </div>
+                <div class="items">
+                    <h5>Estado</h5>
+                    <p>Pendiente</p>
+                </div>
+                <div class="items">
+                    <h5>Intervalo de Tiempo</h5>
+                    <p>Inicio Día - Turnos Inicio 1 AM</p>
+                </div>
+                <div class="items">
+                    <h5>Inicio - Fin</h5>
+                    <p>10:01 - 10:06</p>
+                </div>
+                <div class="items">
+                    <h5>Duración</h5>
+                    <p>5 min</p>
+                </div>
+                <button id="btn-ac-portal">Portal</button>
+            </div>
+        </div>
+        <!-- Info inicio de dia -->
+        <div class="con-detalle-inicio" id="con-detalle-inicio">
+            <div class="con-detalle">
+                <div class="header-detalle">
+                    <h4>Detalle Actividad</h4>
+                     <img src="./assets/img/Group 4.svg" alt="parlante-audio-etb" class="img-audio" id="img-detalle-dia" onclick="alertAudio('au-detalle-dia', 'img-detalle-dia')" style="margin-left: 20px;">
+                     <img src="./assets/img/Group 13.svg" alt="parlante-audio-etb" class="img-audio" id="img-detalle-orden" onclick="alertAudio('au-detalle-orden', 'img-detalle-orden')" style="margin-left: 20px; display: none;">
+                </div>
+                <div class="con-deatelle" id="con-deatelle">
+                    <div class="card">
+                        <p class="cabecera">Datos Cliente</p>
+                        <section class="left">
+                            <br>
+                            <p>Tipo Documento</p>
+                            <p>Número Documento</p>
+                            <p>Nombres</p>
+                            <p>Apellidos</p>
+                            <p>Telefono Fijo</p>
+                            <p>Celular</p>
+                            <p>Celular2</p>
+                            <p>Departamento</p>
+                            <p>Ciudad</p>
+                            <p>Dirección</p>
+                            <p>Estrato</p>
+                            <p>Email</p>
+                            <br>
+                        </section>
+                        <section class="right">
+                            <br>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <br>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="card">
+                        <p class="cabecera">Producto Contratado</p>
+                        <section class="left">
+                            <br>
+                            <p>Producto</p>
+                            <p>Tecnologia</p>
+                            <p>Tipo de Orden</p>
+                            <p>Subtipo de Orden</p>
+                            <br>
+                        </section>
+                        <section class="right">
+                            <br>
+                            <p>Inicio de actividades</p>
+                            <p></p>
+                            <p>Inicio de actividades</p>
+                            <p></p>
+                            <br>
+                        </section>
+                    </div>
+                    <div class="card">
+                        <p class="cabecera">Agendamiento</p>
+                        <section class="left">
+                            <br>
+                            <p>Fecha Agenda</p>
+                            <p>Franja</p>
+                            <p>Estado</p>
+                            <br>
+                        </section>
+                        <section class="right">
+                            <br>
+                            <p><script>document.write(`${month}/${day}/${year}`)</script></p>
+                            <p>IND</p>
+                            <p id="estado-dia">Pendiente</p>
+                        </section>
+                    </div>
+                    <div class="con-prox-act" id="con-prox-act">
+                        <Label>Proxima Actividad  <img src="./assets/img/Group 12.svg" alt="parlante-audio-etb" class="img-audio" id="img-prox-act" onclick="alertAudio('au-prox-act', 'img-prox-act')" style="margin-left: 20px;"></Label>
+                        <select name="" id="">
+                            <option value="">AM_1 MDM-FIBRA-011706262 FTTC Aprovisionamiento - Instalación AK 9 113 52 LC 102</option>
+                            <option value="">Almuerzo</option>
+                        </select>
+                    </div>
+                    <div class="con-btn-in">
+                        <button style="background: var(--blue-os-etb); color: white;" id="volver-btn">Volver</button>
+                        <button style="background: var(--orange-etb); color: white;" id="btn-iniciar-dia">Iniciar</button>
+                    </div>
+                    <div id="alert-footer">
+                        <p>© 2019 - ETB (Empresa de Telecomunicaciones de Bogotá)</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <!-- =====================================Fin portal de instalacion ==================== -->
-    <script src="./js/ruta.js"></script> 
-    <!-- <script src="./js/main.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Info orden -->
+    <div class="con-info-inicio" id="con-info-orden">
+        <div class="con-in-dia">
+            <img src="./assets/img/Group 15.svg" alt="parlante-audio-etb" class="img-audio" id="img-detalle-act" onclick="alertAudio('au-detalle-act', 'img-detalle-act')">
+            <br>
+            <div class="items">
+                <h5>Tipo de Orden</h5>
+                <p>Instalación</p>
+            </div>
+            <div class="items">
+                <h5>Estado</h5>
+                <p>Pendiente</p>
+            </div>
+            <div class="items">
+                <h5>Intervalo de Tiempo</h5>
+                <p>MDM-FIBRA-011706262</p>
+            </div>
+            <div class="items">
+                <h5>Inicio - Fin</h5>
+                <p>10:07 - 11:37</p>
+            </div>
+            <div class="items">
+                <h5>Duración</h5>
+                <p>1 Hora 30 min</p>
+            </div>
+            <button id="btn-ac-aprovi">Aprovisionamiento</button>
+        </div>
+        <div class="con-in-dia">
+            <br>
+            <div class="items">
+                <h5>Nombre:</h5>
+                <p>MARIA MARTINEZ</p>
+            </div>
+            <div class="items">
+                <h5>Tipo identificación Cliente:</h5>
+                <p>CC</p>
+            </div>
+            <div class="items">
+                <h5>Identificación Cliente:</h5>
+                <p>1022414994</p>
+            </div>
+            <div class="items">
+                <h5>Dirección:</h5>
+                <p>AK 9 113 52 LC 102</p>
+            </div>
+        </div>
+    </div>
+    <!-- Info orden -->
+    <!-- Audios -->
+        <!-- Audio activar ruta -->
+        <audio id="au-activarRuta-ru" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/actuvar Ruta.m4a">
+        </audio>
+        <!-- Audio activar ruta -->
+        <!-- Audio iniciar dia -->
+        <audio id="au-iniciar-dia" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/btnIniciarDia.m4a">
+        </audio>
+        <!-- Audio iniciar dia -->
+        <!-- Audio info dia -->
+        <audio id="au-info-dia" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/InfoIniciardia.m4a">
+        </audio>
+        <!-- Audio info dia -->
+        <!-- Audio detalle inicio de dia -->
+        <audio id="au-detalle-dia" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/detalleIniciarDia.m4a">
+        </audio>
+        <!-- Audio detalle inicio de dia -->
+        <!-- Audio proxima actividad -->        
+        <audio id="au-prox-act" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/Paso 6/Proxima actividad.m4a">
+        </audio>
+        <!-- Audio proxima actividad -->
+        <!-- Audio Volver  -->
+        <audio id="au-detalle-orden" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/Volver.m4a">
+        </audio>
+        <!-- Audio Volver  -->
+        <!-- Audio orden a realizar -->
+        <audio id="au-orden-rea" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/ordenArealizar.m4a">
+        </audio>
+        <!-- Audio orden a realizar -->
+        <!-- Audio detalle orden -->
+        <audio id="au-detalle-act" controls class="audio" style="display: none;">
+            <source type="audio/wav" src="./assets/audio/ruta/DetalleOrden.m4a">
+        </audio>
+        <!-- Audio detalle orden -->
+    <!-- Audios -->
+    <!-- Modal -->
+        <!-- modal loading -->
+        <div class="modal fade modal-loading" tabindex="-1" id="modal-loading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">PROCESANDO TU PETICIÓN</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="con-spiner">
+                        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    </div>
+                    <div class="text-spiner"><p>Por favor no cierres la ventana</p></div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- modal loading -->
+    <!-- Modal -->
+    <script src="./bootstrap/jquery.js"></script>
+    <script src="./bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/dash.js"></script>
 </body>
 </html>
