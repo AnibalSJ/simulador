@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Instalación</title>
+    <link rel="stylesheet" href="../assets/fontawesome-free-6.4.0-web/css/solid.css">
+    <link href="../assets/fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="../assets/fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="../assets/fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/pasos.css">
+    <link rel="shortcut icon" href="../assets/img/ETB.png">
+    <link rel="stylesheet" href="./css/tvbox.css">
+    <link rel="stylesheet" href="./css/retomaEqui.css">
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+    </script>
+    <div class="container-genre container-pasos">
+        <div class="con-info-audios">
+            <div class="con-img-au">
+                <img src="../assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="no-audio-f">
+            </div>
+            <div class="info-audios">
+                <p>Nota: Hacer touch sobre estos iconos para más información</p>
+            </div>
+        </div>
+        <div class="header">
+            <div class="volver-header"><img src="../assets/img/angle-left.svg" alt="volver-left"></div>
+            <div class="text-header">ETBQA_Tecnico1
+                <span><script>document.write(`${month}/${day}/${year}`)</script></span>
+            </div>
+            <div class="text-header-ac">Activar ruta de trabajo</div>
+            <img src="../assets/img/search.svg" alt="search">
+            <img src="../assets/img/comment-alt.svg" alt="msg">
+        </div>
+        <div class="container-struct">
+            <div class="breadcump">
+                <a href="../dashboard.html" class="item-bread">Home</a>
+                <a href="../dashboard.html" class="item-bread">Ordenes Agendadas</a>
+                <a href="../orden.html" class="item-bread">Detalle Orden</a>
+                <a href="../pasos.html" class="item-bread" style="color: rgba(55, 0, 255, 0.623);">Instalación</a>
+            </div>
+            <h4>MDM-FIBRA-011706262</h4>
+            <div class="con-main-pasos">
+                <div class="con-pasos sw-main sw-theme-arrows" id="smartwizard">
+                    <ul class="nav nav-tabs step-anchor">
+                        <li class="nav-item active" id="pasoli-1"><a class="nav-link">Paso 1<br><small>Validar Equipos</small></a></li>
+                        <li class="nav-item" id="pasoli-2"><a class="nav-link">Paso 2<br><small>Finalizar</small></a></li>
+                        <li class="nav-item nav-item-alert"><a class="nav-link">
+                            <img src="../assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="img-list-paso-a" onclick="alertAudio('au-list-paso-a', 'img-list-paso-a')" style="margin-left: 20px;">
+                            <audio id="au-list-paso-a" controls class="audio" style="display: none;">
+                                <source type="audio/wav" src="../assets/audio/pasoapaso.m4a">
+                            </audio>
+                        </a></li>   
+                    </ul>
+                </div>
+                <div class="con-general-pasos">
+                    <div class="paso-1-retoma" id="paso-1-retoma">
+                        <div class="con-table-retoma">
+                            <table>
+                                <tr>
+                                    <tr>
+                                        <th>Recuperado</th>
+                                        <th>Tipo Equipo</th>
+                                        <th>Nombre Equipo</th>
+                                        <th>Serial</th>
+                                        <th>Control Remoto</th>
+                                        <th>Adapatador Voltaje</th>
+                                        <th>Cables</th>
+                                        <th>Otros Accesorios</th>
+                                        <th>Falla Física</th>
+                                        <th>Novedades</th>
+                                        <th>Cargar Imagén</th>
+                                        <th>Eliminar</th>
+                                    </tr>
+                                    <tbody id="retoma-equipo">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="inv-pr">
+                                            </td>
+                                            <td>
+                                                <select name="" id="" disabled>
+                                                    <option value="">CPE-STB</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="text" name="" id="" value="Decodificador">
+                                            </td>
+                                            <td>
+                                                <input type="text" name="" id="" value="21500821487UF8305477">
+                                            </td>
+                                            <td>
+                                                <select name="" id="">
+                                                    <option value="">No Aplica</option>
+                                                    <option value="">SI</option>
+                                                    <option value="">NO</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="number" name="" id="" value="1">
+                                            </td>
+                                            <td>
+                                                <select name="" id="">
+                                                    <option value="">HDMI</option>
+                                                    <option value="">AUDIO Y VIDEO</option>
+                                                    <option value="">RJ 45</option>
+                                                    <option value="">No Aplica</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="" id="">
+                                                    <option value="">CAJA</option>
+                                                    <option value="">Manuales</option>
+                                                    <option value="">No Aplica</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="" id="">
+                                                    <option value="">Visible</option>
+                                                    <option value="">No Visible</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <select name="" id="">
+                                                    <option value="">SERIAL NO COINCIDE CON ORDEN</option>
+                                                    <option value="">EQUIPO NO COINCIDE CON LA ORDEN</option>
+                                                    <option value="">No Aplica</option> 
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="file" name="" id="">
+                                            </td>
+                                            <td>
+                                                <i class="fa-solid fa-trash" style="color: #565e6c;"></i>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </tr>
+                            </table>
+                        </div>
+                        <input type="text" value="AGREGAR EQUIPO NO REGISTRADO" id="equi-no-re">
+                        <div id="con-btn-reto">
+                            <input type="text" value="DOCUMENTOS" style="background: #008AA6;">
+                            <input type="text" value="CONFIRMAR EQUIPOS" id="conequi" style="background: #F36F31;">
+                        </div>
+                        <div id="boleta-retom">
+                            <div class="item-acce">
+                                <p class="cabecera">Firma Cliente                <img src="../assets/img/Group 14.svg" alt="parlante-audio-etb" class="img-audio" id="img-firm-cliente" onclick="alertAudio('au-firm-cliente', 'img-firm-cliente')"></p>
+                                <audio id="au-firm-cliente" controls class="audio" style="display: none;">
+                                    <source type="audio/wav" src="../assets/audio/Paso 7/Firma Cliente.m4a">
+                                </audio>
+                                <div class="content-firma">
+                                    <div class="firma-cli">
+                                        <div class="firma">
+                                            <label for=""><img src="../assets/img/firma-cli.png" alt="" srcset=""></label>
+                                        </div>
+                                        <div class="detalle-firma">
+                                            <div class="text-firma">
+                                                <label for="">Firme Aquí</label>
+                                            </div>
+                                            <span><button>Limpiar Firma</button></span>
+                                            <span class="guardar"><button>Guardar</button></span>
+                                        </div>
+                                    </div>
+                                    <p>Con su firma usted autoriza de manera libre y voluntaria a ETB el tratamiento de datos personales y reconoce que la información suministrada es ciera y no ha sido audlterada. Nuestra Política de datos personales puede ser consultada en www.etb.com</p>
+                                </div>
+                            </div>
+    
+                            <div class="item-acce">
+                                <p class="cabecera">Firma Técnico <img src="../assets/img/Group 15.svg" alt="parlante-audio-etb" class="img-audio" id="img-firm-tec-ps7" onclick="alertAudio('au-firm-tec-ps7', 'img-firm-tec-ps7')"></p>
+                                <audio id="au-firm-tec-ps7" controls class="audio" style="display: none;">
+                                    <source type="audio/wav" src="../assets/audio/Paso 7/Firma Tecnico.m4a">
+                                </audio>
+                                <div class="content-firma">
+                                    <div class="firma-cli">
+                                        <div class="firma">
+                                            <label for=""><img src="../assets/img/firma-tec.png" alt="" srcset=""></label>
+                                        </div>
+                                        <div class="detalle-firma">
+                                            <div class="text-firma">
+                                                <label for="">Firme Aquí</label>
+                                            </div>
+                                            <span><button>Limpiar Firma</button></span>
+                                            <span class="guardar"><button>Guardar</button></span>
+                                        </div>
+                                    </div>
+                                    <p>Con su firma usted autoriza de manera libre y voluntaria a ETB el tratamiento de datos personales y reconoce que la información suministrada es ciera y no ha sido audlterada. Nuestra Política de datos personales puede ser consultada en www.etb.com</p>
+                                </div>
+                            </div>
+                            <div class="con-btn-f">
+                                <input value="Siguiente" id="btn-paso-2-retom">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paso-2-retoma" id="paso-2-retoma" style="display: none;">
+                        <div class="item-ac" id="item-paso-2-reto">
+                            <p class="cabecera">TELEVISIÓN <img src="../assets/img/Group 8.svg" alt="parlante-audio-etb" class="img-audio" id="img-acceso-red-paso-3" onclick="alertAudio('audio-acceso-red-paso-3', 'img-acceso-red-paso-3')"></p>
+                            <audio id="audio-acceso-red-paso-3" controls class="audio" style="display: none;">
+                                <source type="audio/wav" src="../assets/audio/Paso 3/64335c147334c3.52840870.m4a">
+                            </audio>
+                            <ul  id="item-tv">
+                                <li>
+                                    <img src="../assets/img/arrow-turn-down-right.svg" alt="">
+                                    <img src="../assets/img/CARPETA.png" alt="">
+                                    <p>DECODIFICADOR 1</p>
+                                </li>
+                                <li style="margin-left: 20px;">
+                                    <img src="../assets/img/arrow-turn-down-right.svg" alt="">
+                                    <img src="../assets/img/file.svg" alt="">
+                                    <p>SerialEquipo: <script>document.write(document.getElementById('stb-dec-2').value)</script></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="con-btn-f">
+                            <input value="finalizar" id="btn-finalizar-retom">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- botones hidden -->
+    <input type="text" id="agregar-espacio" style="display: none;">
+    <input type="text" id="agregar-diapo" style="display: none;">
+    <input type="text" id="btn-guardar-boleta" style="display: none;">
+    <input type="text" id="btn-paso-8" style="display: none;">
+    <input type="text" id="btn-modal-ps4error" style="display: none;">
+    <input type="text" id="btn-paso-2" style="display: none;">
+    <input type="text" id="btn-paso-3" style="display: none;">
+    <input type="text" id="btn-paso-v-1" style="display: none;">
+    <input type="text" id="btn-paso-4" style="display: none;">
+    <input type="text" id="btn-paso-v-2" style="display: none;">
+    <input type="text" id="btn-paso-v-3" style="display: none;">
+    <input type="text" id="btn-paso-v-3-b" style="display: none;">
+    <input type="text" id="btn-paso-prev-7" style="display: none;">
+    <input type="text" id="btn-paso-7" style="display: none;">
+    <input type="text" id="btn-close-acceso" style="display: none;">
+    <input type="text" id="btn-close-flujo" style="display: none;">
+    <input type="text" id="con-venta-SVA" style="display: none;">
+    <input type="text" id="" style="display: none;">
+    <input type="text" id="" style="display: none;">
+    <!-- botones hidden -->
+
+    <!-- Botones emergentes -->
+    <div id="acceso-btn" class="btn-flot">Acceso</div>
+    <div id="flujo-btn" class="btn-flot">Flujo</div>
+    <!-- Botones emergentes -->
+    <!-- Audios -->
+    <!-- Audios -->
+    <!-- Modal -->
+        <!-- modal loading -->
+        <div class="modal fade modal-loading" tabindex="-1" id="modal-loading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">PROCESANDO TU PETICIÓN</h5>
+                </div>
+                <div class="modal-body">
+                    <div class="con-spiner">
+                        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    </div>
+                    <div class="text-spiner"><p>Por favor no cierres la ventana</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal loading -->
+    <!-- modal error -->
+    <div class="modal modal-success-sim" tabindex="-1" id="modal-servi-fal">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">ERROR</h5>
+            </div>
+            <div class="modal-body">
+              <p>INS026 - No fueron recuperados todos los equipos esperados. Seriales no recuperados
+                <br>
+                <li id="serialNoR">21500821487UF8305477</li>
+              </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-modal-ps4error">ACEPTAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="con-venta-SVA" id="suspend-retom">
+        Suspender
+    </div>
+    <div class="modal modal-success-sim" tabindex="-1" id="suspend-retom-mod">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">SUCCESS</h5>
+            </div>
+            <div class="modal-body">
+              <p>Se ha suspendido con éxito
+              </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btn-modal-ps4error">ACEPTAR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- modal error -->
+    <!-- Modal -->
+    <script src="../bootstrap/jquery.js"></script>
+    <script src="../bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- <script src="../js/script.js"></script> -->
+    <!-- <script src="../js/pasos.js"></script> -->
+    <!-- <script src="../js/pasoTwo.js"></script> -->
+    <script src="../package/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/retomaEquipos.js"></script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Instalación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/orden.css">
+</head>
+<body>
+    <!-- <div class="container-portal">
+        <div class="info">
+            <div class="con-ico"><img src="./assets/img/interrogatorio.svg" alt=""></div>
+            <div class="con-text-info">Dando click en este icono, puede saber más información.</div>
+        </div>
+       <div class="header">
+            <div class="menu">
+                <img src="./assets/img/menu-hamburguesa.svg" alt="">
+            </div>
+            <div class="con-info-u">
+                <div class="info-u">
+                    <img src="./assets/img/user.png" alt="">
+                    <p>Usuario</p>
+                </div>
+            </div>
+            <div class="menu-drown" id="menu-drown">
+                <a href="#">Cambiar contraseña</a>
+                <a href="./login.html">Salir</a>
+            </div>
+       </div>
+       <div class="body-portal body-info-eta">
+        <div class="breadcump">
+            <a href="./dashboard.html" class="item-bread">
+                Home</a>
+            <a href="./dashboard.html" class="item-bread">Ordenes Agendadas</a>
+            <a href="./orden.html" class="item-bread">Detalle Orden</a>
+        </div>
+        <div class="body-dash">
+            <div class="header-dash">
+                <h2>Detalle Orden <span>MDM-FIBRA-011706262</span></h2>
+            </div>
+            <div class="con-cards-portal">
+                <div class="card">
+                    <p class="cabecera">Datos Cliente</p>
+                    <section class="left">
+                        <br>
+                        <p>Tipo Documento</p>
+                        <p>Número Documento</p>
+                        <p>Nombres</p>
+                        <p>Apellidos</p>
+                        <p>Telefono Fijo</p>
+                        <p>Celular</p>
+                        <p>Celular2</p>
+                        <p>Departamento</p>
+                        <p>Ciudad</p>
+                        <p>Dirección</p>
+                        <p>Estrato</p>
+                        <p>Email</p>
+                        <p>Tipo Cliente</p>
+                        <p>Segmento</p>
+                        <p>Segmento UEN</p>
+                        <p>UEN</p>
+                        <p>Categoria</p>
+                        <p>Recurrente</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>CC</p>
+                        <p>8765432374</p>
+                        <p>MARTHA</p>
+                        <p>MARIN</p>
+                        <br>
+                        <p>3138009169</p>
+                        <p></p>
+                        <p>BOGOTA</p>
+                        <p>BOGOTA D.C.</p>
+                        <p>CL 83 BIS 23 47 AP 201</p>
+                        <p>5</p>
+                        <p>bvarela@greensqa.com</p>
+                        <br>
+                        <p>Hogares</p>
+                        <p>Hogares</p>
+                        <p>Hogares y MiPymes</p>
+                        <p>PLATA</p>
+                        <p>No</p>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Otros Datos Instalación</p>
+                    <section class="left">
+                        <br>
+                        <p>Envío Contrato</p>
+                        <p>Usuario Venta</p>
+                        <p>Usuario creación</p>
+                        <p>Canal</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>DigitalSinFirma</p>
+                        <p>103358826</p>
+                        <p>migurod2</p>
+                        <br>
+                        <br>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Bundle Seleccionado</p>
+                    <div class="con-bundle">
+                        <div class="bundle">
+                            <div class="header-b">
+                                <p class="f-h-b">SINGLE INTERNET 200M HOG FTTH V1</p>
+                                <p>$ 80900 <span>mes</span></p>
+                            </div>
+                            <div class="service service-in">
+                                <div class="header-serv" onclick="bundlle()">
+                                    INTERNET
+                                </div>
+                                <div class="list-s">
+                                    <ul>
+                                        <li><span>PUNTO CABLEADO</span></li>
+                                        <li><span>IP DINÁMICA</span></li>
+                                        <li><span>PLAN 200M/200m</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Producto Contratado</p>
+                    <section class="left">
+                        <br>
+                        <p>Producto</p>
+                        <p>Tecnologia</p>
+                        <p>Tipo de Orden</p>
+                        <p>Subtipo de Orden</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>SINGLE INTERNET 200M HOG FTTH V1</p>
+                        <p>FTTH</p>
+                        <p>CADE</p>
+                        <p>UPGRADE</p>
+                        <br>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Agendamiento</p>
+                    <section class="left">
+                        <br>
+                        <p>Fecha Agenda</p>
+                        <p>Franja</p>
+                        <p>Estado</p>
+                        <p>Celular Contacto</p>
+                        <p>Correo Contacto</p>
+                        <p>Inicio Ventana Servicio</p>
+                        <p>Fin Ventana Servicio</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>12/7/2022</p>
+                        <p>PM_2</p>
+                        <p>Pendiente</p>
+                        <p>318009169</p>
+                        <p>bvarela@greensqa.com</p>
+                        <p>20:00:00</p>
+                        <p>22:00:00</p>
+                        <br>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">SVAs</p>
+                    <div class="con-table">
+                        <br>
+                        <table>
+                                <tr class="head-t">
+                                    <td>Nombre SVAs</td>
+                                    <td>Valor</td>
+                                </tr>
+                                <tr>
+                                    <td>REUBICACIÓN DE ONT</td>
+                                    <td>$328,000</td>
+                                </tr>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="footer-dash">
+                <a href="./dashboard.html">Volver</a>
+                <a href="./pasos2.html" class="ac">Iniciar</a>
+            </div>
+        </div>
+<br><br>
+       </div>
+    </div> -->
+    <div class="container-portal">
+        <div class="con-info-audios">
+            <div class="con-img-au">
+                <img src="./assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="no-audio-f">
+            </div>
+            <div class="info-audios">
+                <p>Nota: Hacer touch sobre estos iconos para más información</p>
+            </div>
+        </div>
+        <div class="header">
+            <div class="volver-header"><img src="./assets/img/angle-left.svg" alt="volver-left"></div>
+            <div class="text-header">ETBQA_Tecnico1
+                <span><script>document.write(`${month}/${day}/${year}`)</script></span>
+            </div>
+            <div class="text-header-ac">Activar ruta de trabajo</div>
+            <img src="./assets/img/search.svg" alt="search">
+            <img src="./assets/img/comment-alt.svg" alt="msg">
+        </div>  
+       <div class="body-portal body-info-eta">
+        <div class="breadcump">
+            <a href="./dashboard.html" class="item-bread">
+                Home</a>
+            <a href="./dashboard.html" class="item-bread">Ordenes Agendadas</a>
+            <a href="./orden.html" class="item-bread">Detalle Orden</a>
+        </div>
+        <div class="body-dash">
+            <div class="header-dash">
+                <h2>Detalle Orden <span>MDM-FIBRA-011706262</span><img src="./assets/img/Group 5.svg" alt="parlante-audio-etb" class="img-audio" id="img-detalle-orden" onclick="alertAudio('au-detalle-orden', 'img-detalle-orden')" style="margin-left: 20px;"></h2>
+                <audio id="au-detalle-orden" controls class="audio" style="display: none;">
+                    <source type="audio/wav" src="./assets/audio/ruta/DetalleOrden.m4a">
+                </audio>
+
+            </div>
+            <div class="con-cards-portal">
+                <div class="card">
+                    <p class="cabecera">Datos Cliente</p>
+                    <section class="left">
+                        <br>
+                        <p>Tipo Documento</p>
+                        <p>Número Documento</p>
+                        <p>Nombres</p>
+                        <p>Apellidos</p>
+                        <p>Telefono Fijo</p>
+                        <p>Celular</p>
+                        <p>Celular2</p>
+                        <p>Departamento</p>
+                        <p>Ciudad</p>
+                        <p>Dirección</p>
+                        <p>Estrato</p>
+                        <p>Email</p>
+                        <p>Tipo Cliente</p>
+                        <p>Segmento</p>
+                        <p>Segmento UEN</p>
+                        <p>UEN</p>
+                        <p>Categoria</p>
+                        <p>Recurrente</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>CC</p>
+                        <p>8765432374</p>
+                        <p>MARTHA</p>
+                        <p>MARIN</p>
+                        <br>
+                        <p>3138009169</p>
+                        <p></p>
+                        <p>BOGOTA</p>
+                        <p>BOGOTA D.C.</p>
+                        <p>CL 83 BIS 23 47 AP 201</p>
+                        <p>5</p>
+                        <p>bvarela@greensqa.com</p>
+                        <br>
+                        <p>Hogares</p>
+                        <p>Hogares</p>
+                        <p>Hogares y MiPymes</p>
+                        <p>PLATA</p>
+                        <p>No</p>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Otros Datos Instalación</p>
+                    <section class="left">
+                        <br>
+                        <p>Envío Contrato</p>
+                        <p>Usuario Venta</p>
+                        <p>Usuario creación</p>
+                        <p>Canal</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>DigitalSinFirma</p>
+                        <p>103358826</p>
+                        <p>migurod2</p>
+                        <br>
+                        <br>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Bundle Seleccionado</p>
+                    <div class="con-bundle">
+                        <div class="bundle">
+                            <div class="header-b">
+                                <p class="f-h-b">SINGLE INTERNET 200M HOG FTTH V1</p>
+                                <p>$ 80900 <span>mes</span></p>
+                            </div>
+                            <div class="service service-in">
+                                <div class="header-serv" onclick="bundlle()">
+                                    INTERNET
+                                </div>
+                                <div class="list-s">
+                                    <ul>
+                                        <li><span>PUNTO CABLEADO</span></li>
+                                        <li><span>IP DINÁMICA</span></li>
+                                        <li><span>PLAN 200M/200m</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Producto Contratado</p>
+                    <section class="left">
+                        <br>
+                        <p>Producto</p>
+                        <p>Tecnologia</p>
+                        <p>Tipo de Orden</p>
+                        <p>Subtipo de Orden</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>SINGLE INTERNET 200M HOG FTTH V1</p>
+                        <p>FTTH</p>
+                        <p>CADE</p>
+                        <p>UPGRADE</p>
+                        <br>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">Agendamiento</p>
+                    <section class="left">
+                        <br>
+                        <p>Fecha Agenda</p>
+                        <p>Franja</p>
+                        <p>Estado</p>
+                        <p>Celular Contacto</p>
+                        <p>Correo Contacto</p>
+                        <p>Inicio Ventana Servicio</p>
+                        <p>Fin Ventana Servicio</p>
+                        <br>
+                    </section>
+                    <section class="right">
+                        <br>
+                        <p>12/7/2022</p>
+                        <p>PM_2</p>
+                        <p>Pendiente</p>
+                        <p>318009169</p>
+                        <p>bvarela@greensqa.com</p>
+                        <p>20:00:00</p>
+                        <p>22:00:00</p>
+                        <br>
+                    </section>
+                </div>
+
+                <div class="card">
+                    <p class="cabecera">SVAs</p>
+                    <div class="con-table">
+                        <br>
+                        <table>
+                                <tr class="head-t">
+                                    <td>Nombre SVAs</td>
+                                    <td>Valor</td>
+                                </tr>
+                                <tr>
+                                    <td>REUBICACIÓN DE ONT</td>
+                                    <td>$328,000</td>
+                                </tr>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-dash">
+                <a href="./dashboard.html">Volver</a>
+                <a href="./pasos2.html" class="ac">Iniciar</a>
+            </div>
+        </div>
+<br><br>
+       </div>
+    </div>
+    <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

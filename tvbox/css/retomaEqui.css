@@ -1,0 +1,106 @@
+.con-table-retoma{
+    width: 100%;
+    max-width: 100%;
+    overflow-x: scroll;
+}
+.con-table-retoma table tr th{
+    background: #20A4CB;
+    color: white;
+    border: 1px solid white;
+}
+.con-table-retoma table tbody tr td{
+    padding: 10px;
+}
+.con-table-retoma table tbody tr td select,.con-table-retoma table tbody tr td input{
+    /* width: 100%; */
+    min-width: 100%;
+}
+#equi-no-re{
+    background: var(--blue-os-etb);
+    width: 100%;
+    color: white;
+    border-radius: 20px;
+    border: 0px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#flujo-btn, #acceso-btn{
+    display: none;
+}
+#boleta-retom{
+    display: none;
+}
+#con-btn-reto{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2,190px);
+    column-gap: 10px;
+    padding: 50px;
+}
+#con-btn-reto input{
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    cursor: pointer;
+}
+
+#serialNoR{
+    color: #20A4CB;
+    text-align: center;
+}
+.con-btn-f{
+    display: grid;
+    justify-content: center;
+    padding: 30px;
+}
+.con-btn-f input{
+    text-align: center;
+    color: white;
+    background: #F36F31;
+    border-radius: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    border-style: none;
+    height: 35px;
+}
+#item-paso-2-reto{
+    border: 2px solid #f26821;
+    line-height: 1;
+    display: grid;
+    grid-template-columns: 100%;
+    column-gap: 10px;
+    border-radius: 25px;
+    position: relative;
+    padding: 0px 20px;
+    font-size: 13px;
+    margin-top: 20px;
+    width: 100% !important;
+    /* height: 500px; */
+    padding-top: 40px;
+    margin-bottom: 50px;
+    margin-top: 0px;
+    max-width: none;
+}
+#item-paso-2-reto .cabecera{
+    font-size: 17px;
+    color: #F26922;
+    font-weight: bold;
+}
+#item-paso-2-reto ul{
+    list-style: none;
+}
+#item-paso-2-reto ul li{
+    display: flex;
+    align-items: center ;
+    column-gap: 10px;
+}
+#item-paso-2-reto ul li img{
+    width: 20px;
+}
+#suspend-retom{
+    background: #f26821;
+}
